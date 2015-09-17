@@ -360,9 +360,3 @@ public class RequestParams
     }
   }
 }
-
-
-/* Location:              C:\Users\Administrator\Desktop\classes-dex2jar.jar!\com\lidroid\xutils\http\RequestParams.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */

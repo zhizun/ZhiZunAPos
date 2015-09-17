@@ -108,9 +108,3 @@ public class HttpCache
     httpMethod_enabled_map.put(paramHttpMethod.toString(), Boolean.valueOf(paramBoolean));
   }
 }
-
-
-/* Location:              C:\Users\Administrator\Desktop\classes-dex2jar.jar!\com\lidroid\xutils\http\HttpCache.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */
