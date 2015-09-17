@@ -24,34 +24,34 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.util.LogUtils;
-import com.yumendian.cs.activity.manager.MerchantManager;
-import com.yumendian.cs.activity.manager.UserManager;
-import com.yumendian.cs.biz.action.merchant.LogOutAction;
-import com.yumendian.cs.biz.dao.impl.S_IndustryDaoImpl;
-import com.yumendian.cs.biz.dao.impl.S_MerchantDaoImpl;
-import com.yumendian.cs.biz.dao.impl.S_Sync_UploadDaoImpl;
-import com.yumendian.cs.common.utils.ExecutorUtils;
-import com.yumendian.cs.common.utils.ImgUtil;
-import com.yumendian.cs.common.utils.PreferencesUtil;
-import com.yumendian.cs.common.utils.ToastUtil;
-import com.yumendian.cs.entities.S_Industry;
-import com.yumendian.cs.entities.S_Merchant;
-import com.yumendian.cs.entities.S_Role;
-import com.yumendian.cs.entities.S_User;
-import com.yumendian.cs.entities.api.ImgResult;
-import com.yumendian.cs.entities.api.MerchantImgUploadParam;
-import com.yunmendian.pos.service.SyncService;
-import com.yunmendian.pos.service.SyncService.OnSyncServiceListener;
-import com.yunmendian.pos.ui.activity.BaseTitleTopBarActivity;
-import com.yunmendian.pos.ui.activity.CropImageActivity;
-import com.yunmendian.pos.ui.activity.GuideActivity;
-import com.yunmendian.pos.ui.activity.IndustrySelActivity2;
-import com.yunmendian.pos.ui.popupwindow.PhotoPopupWindow;
-import com.yunmendian.pos.ui.popupwindow.PhotoPopupWindow.OnPhotoPopupWindowClickListener;
-import com.yunmendian.pos.ui.widget.BaseTopBar.OnTopBarLeftClickListener;
-import com.yunmendian.pos.ui.widget.BaseTopBar.OnTopBarRightClickListener;
-import com.yunmendian.pos.ui.widget.TitleTopBar;
-import com.yunmendian.pos.xujie.NetUtil;
+import com.zizun.cs.activity.manager.MerchantManager;
+import com.zizun.cs.activity.manager.UserManager;
+import com.zizun.cs.biz.action.merchant.LogOutAction;
+import com.zizun.cs.biz.dao.impl.S_IndustryDaoImpl;
+import com.zizun.cs.biz.dao.impl.S_MerchantDaoImpl;
+import com.zizun.cs.biz.dao.impl.S_Sync_UploadDaoImpl;
+import com.zizun.cs.common.utils.ExecutorUtils;
+import com.zizun.cs.common.utils.ImgUtil;
+import com.zizun.cs.common.utils.PreferencesUtil;
+import com.zizun.cs.common.utils.ToastUtil;
+import com.zizun.cs.entities.S_Industry;
+import com.zizun.cs.entities.S_Merchant;
+import com.zizun.cs.entities.S_Role;
+import com.zizun.cs.entities.S_User;
+import com.zizun.cs.entities.api.ImgResult;
+import com.zizun.cs.entities.api.MerchantImgUploadParam;
+import com.zhizun.pos.service.SyncService;
+import com.zhizun.pos.service.SyncService.OnSyncServiceListener;
+import com.zhizun.pos.ui.activity.BaseTitleTopBarActivity;
+import com.zhizun.pos.ui.activity.CropImageActivity;
+import com.zhizun.pos.ui.activity.GuideActivity;
+import com.zhizun.pos.ui.activity.IndustrySelActivity2;
+import com.zhizun.pos.ui.popupwindow.PhotoPopupWindow;
+import com.zhizun.pos.ui.popupwindow.PhotoPopupWindow.OnPhotoPopupWindowClickListener;
+import com.zhizun.pos.ui.widget.BaseTopBar.OnTopBarLeftClickListener;
+import com.zhizun.pos.ui.widget.BaseTopBar.OnTopBarRightClickListener;
+import com.zhizun.pos.ui.widget.TitleTopBar;
+import com.zhizun.pos.xujie.NetUtil;
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -492,9 +492,3 @@ public class MerchantActivity
     });
   }
 }
-
-
-/* Location:              C:\Users\Administrator\Desktop\classes-dex2jar.jar!\com\yunmendian\pos\ui\activity\merchant\MerchantActivity.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */

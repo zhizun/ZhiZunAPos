@@ -14,34 +14,34 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.lidroid.xutils.util.LogUtils;
-import com.yumendian.cs.activity.manager.UserManager;
-import com.yumendian.cs.biz.dao.impl.PurchaseDaoImpl;
-import com.yumendian.cs.biz.dao.trans.impl.PurchaseTransImpl;
-import com.yumendian.cs.biz.dao.utils.IDUtil;
-import com.yumendian.cs.common.utils.DateTimeUtil;
-import com.yumendian.cs.common.utils.ExecutorUtils;
-import com.yumendian.cs.common.utils.ToastUtil;
-import com.yumendian.cs.entities.PO_Detail;
-import com.yumendian.cs.entities.PO_Header;
-import com.yumendian.cs.entities.S_User;
-import com.yumendian.cs.entities.Store;
-import com.yumendian.cs.entities.TransactionLog;
-import com.yumendian.cs.entities.biz.Associate;
-import com.yumendian.cs.ui.entity.PurchaseGoods;
-import com.yunmendian.pos.ui.activity.BaseFragmentTitleTopBarActivity;
-import com.yunmendian.pos.ui.activity.MainActivity;
-import com.yunmendian.pos.ui.activity.scan.BusinessType;
-import com.yunmendian.pos.ui.activity.scan.CaptureActivity;
-import com.yunmendian.pos.ui.adapter.StockAdapter;
-import com.yunmendian.pos.ui.dialog.PickTimeDialog;
-import com.yunmendian.pos.ui.dialog.PickTimeDialog.onDatePickListener;
-import com.yunmendian.pos.ui.widget.BaseTopBar.OnTopBarLeftClickListener;
-import com.yunmendian.pos.ui.widget.BaseTopBar.OnTopBarRightClickListener;
-import com.yunmendian.pos.ui.widget.InterceptListView;
-import com.yunmendian.pos.ui.widget.TitleTopBar;
-import com.yunmendian.pos.util.DataUtil;
-import com.yunmendian.pos.util.ResUtil;
-import com.yunmendian.pos.util.TextViewUtil;
+import com.zizun.cs.activity.manager.UserManager;
+import com.zizun.cs.biz.dao.impl.PurchaseDaoImpl;
+import com.zizun.cs.biz.dao.trans.impl.PurchaseTransImpl;
+import com.zizun.cs.biz.dao.utils.IDUtil;
+import com.zizun.cs.common.utils.DateTimeUtil;
+import com.zizun.cs.common.utils.ExecutorUtils;
+import com.zizun.cs.common.utils.ToastUtil;
+import com.zizun.cs.entities.PO_Detail;
+import com.zizun.cs.entities.PO_Header;
+import com.zizun.cs.entities.S_User;
+import com.zizun.cs.entities.Store;
+import com.zizun.cs.entities.TransactionLog;
+import com.zizun.cs.entities.biz.Associate;
+import com.zizun.cs.ui.entity.PurchaseGoods;
+import com.zhizun.pos.ui.activity.BaseFragmentTitleTopBarActivity;
+import com.zhizun.pos.ui.activity.MainActivity;
+import com.zhizun.pos.ui.activity.scan.BusinessType;
+import com.zhizun.pos.ui.activity.scan.CaptureActivity;
+import com.zhizun.pos.ui.adapter.StockAdapter;
+import com.zhizun.pos.ui.dialog.PickTimeDialog;
+import com.zhizun.pos.ui.dialog.PickTimeDialog.onDatePickListener;
+import com.zhizun.pos.ui.widget.BaseTopBar.OnTopBarLeftClickListener;
+import com.zhizun.pos.ui.widget.BaseTopBar.OnTopBarRightClickListener;
+import com.zhizun.pos.ui.widget.InterceptListView;
+import com.zhizun.pos.ui.widget.TitleTopBar;
+import com.zhizun.pos.util.DataUtil;
+import com.zhizun.pos.util.ResUtil;
+import com.zhizun.pos.util.TextViewUtil;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -376,9 +376,3 @@ public class PurchaseActivity
     startActivity(this.mIntent);
   }
 }
-
-
-/* Location:              C:\Users\Administrator\Desktop\classes-dex2jar.jar!\com\yunmendian\pos\ui\activity\purchase\PurchaseActivity.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */
