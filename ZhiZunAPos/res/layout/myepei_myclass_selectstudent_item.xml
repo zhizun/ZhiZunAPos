@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/itembg"
+        />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:background="@color/white"
+	    android:orientation="horizontal"
+	    android:paddingBottom="15dp"
+	    android:paddingTop="15dp" 
+        >
+    <ImageView
+        android:id="@+id/iv_senddynamic_selectstudent_item_arrow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tv_senddynamic_selectstudent_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_senddynamic_selectstudent_item_arrow"
+        android:singleLine="true"
+        android:text="美术一班"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+</LinearLayout>

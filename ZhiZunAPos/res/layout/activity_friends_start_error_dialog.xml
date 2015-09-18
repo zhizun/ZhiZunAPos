@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="您未授权访问手机通信录" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/itembg" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="10dp"
+        android:textColor="@color/gray_font"
+        android:textSize="16dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="益培网将无法找到您的好友，您也无法看到好友对兴趣教育班的评价！" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/itembg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+        <Button
+            android:id="@+id/bt_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_border"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:text="我知道了"
+            android:textColor="@color/gray_font" />
+        
+    </LinearLayout>
+
+</LinearLayout>

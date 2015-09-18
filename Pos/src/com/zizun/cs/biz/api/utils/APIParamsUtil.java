@@ -5,9 +5,9 @@ import android.util.Base64;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 import com.lidroid.xutils.util.LogUtils;
-import com.yumendian.cs.common.utils.DateTimeUtil;
-import com.yumendian.cs.common.utils.JsonUtil;
-import com.yumendian.cs.common.utils.MD5Util;
+import com.zizun.cs.common.utils.DateTimeUtil;
+import com.zizun.cs.common.utils.JsonUtil;
+import com.zizun.cs.common.utils.MD5Util;
 import java.io.UnsupportedEncodingException;
 import org.apache.http.ParseException;
 import org.apache.http.entity.StringEntity;
@@ -83,9 +83,3 @@ public class APIParamsUtil
     LogUtils.i(JsonUtil.toJson(paramRequestParams));
   }
 }
-
-
-/* Location:              C:\Users\Administrator\Desktop\classes-dex2jar.jar!\com\yumendian\cs\biz\api\utils\APIParamsUtil.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */

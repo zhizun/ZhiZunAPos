@@ -2,7 +2,15 @@
 <resources>
 
     <string name="app_name">Pos</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="goods_name">商品名称</string>
+    <string name="goods_number">商品货号</string>
+    <string name="goods_amount">商品数量</string>
+    <string name="goods_code">商品条码</string>
+    <string name="goods_category">商品分类</string>
+    <string name="stockprice">采购价格</string>
+    <string name="saleprice">销售价格</string>
+    <string name="upload_picture">上传图片</string>
+    <string name="save">保存</string>
 
 </resources>

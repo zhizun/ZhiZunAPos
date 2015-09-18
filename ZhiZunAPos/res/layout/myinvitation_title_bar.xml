@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/darkblue_3" >
+
+    <FrameLayout
+        android:id="@+id/fl_area_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/common_constact" >
+	    <ImageView
+	        android:id="@+id/title_iv_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_gravity="left|center_vertical"
+	        android:src="@drawable/arrow_left" />
+	</FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/common_constact"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_myinvitation_title_bar_receive"
+            style="@style/top_group"
+            android:text="@string/title_text_myinvitation_receive" />
+
+        <Button
+            android:id="@+id/btn_myinvitation_title_bar_send"
+            style="@style/top_all"
+            android:text="@string/title_text_myinvitation_send" />
+    </LinearLayout>
+
+	<FrameLayout
+	    	android:id="@+id/fl_area_right"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_toRightOf="@+id/common_constact" >
+	    <ImageView
+	        android:id="@+id/title_iv_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|center_vertical"
+	        android:layout_marginRight="10dp" />
+	</FrameLayout>
+</RelativeLayout>

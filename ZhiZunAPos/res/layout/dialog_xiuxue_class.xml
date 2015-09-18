@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/il_dialog_xiuxue_class_title"
+        layout="@layout/dialog_selecter_class_title" />
+
+    <TextView
+        android:id="@+id/tv_dialog_xiuxue_class_starttime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_dialog_xiuxue_class_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="休学日期"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_dialog_xiuxue_class_starttime_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dialog_xiuxue_class_starttime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="8dp"
+        android:textColor="@color/gray_font"
+        android:textColorHint="#a9a9a9"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_dialog_xiuxue_class_endtime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dialog_xiuxue_class_starttime_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="预计复学日期"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_dialog_xiuxue_class_endtime_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dialog_xiuxue_class_endtime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="8dp"
+        android:textColor="@color/gray_font"
+        android:textColorHint="#a9a9a9"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dialog_xiuxue_class_endtime_text"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp" >
+
+        <Button
+            android:id="@+id/btn_dialog_selectstudent_yes"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_dialog_selectstudent_no"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

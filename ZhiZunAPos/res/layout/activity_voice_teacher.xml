@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_zxdt_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_my_notice_teacher_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/title_bar_activity_zxdt_teacher"
+        android:background="@color/simple_eeeeee"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_my_notice_teacher_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_my_notice_teacher_all"
+                style="@style/top_common_scroll_view_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部" >
+            </TextView>
+
+            <View
+                android:id="@+id/v_my_notice_teacher_divider_all"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignRight="@+id/tv_my_notice_teacher_all"
+                android:layout_below="@+id/tv_my_notice_teacher_all"
+                android:layout_marginTop="3dp"
+                android:background="@color/darkblue"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_notice_teacher_waitsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_my_notice_teacher_waitsend"
+                style="@style/top_common_scroll_view_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未浏览" >
+            </TextView>
+
+            <View
+                android:id="@+id/v_my_notice_teacher_divider_waitsend"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignRight="@+id/tv_my_notice_teacher_waitsend"
+                android:layout_below="@+id/tv_my_notice_teacher_waitsend"
+                android:layout_marginTop="3dp"
+                android:background="@color/darkblue"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_notice_teacher_beensent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_my_notice_teacher_beensent"
+                style="@style/top_common_scroll_view_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未回复" >
+            </TextView>
+
+            <View
+                android:id="@+id/v_my_notice_teacher_divider_beensent"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignRight="@+id/tv_my_notice_teacher_beensent"
+                android:layout_below="@+id/tv_my_notice_teacher_beensent"
+                android:layout_marginTop="3dp"
+                android:background="@color/darkblue"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_my_notice_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_my_notice_teacher_menu"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+    
+    <include layout="@layout/common_zxhf"/>
+
+</RelativeLayout>

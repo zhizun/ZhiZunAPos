@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_myinvitation_senddynamic_selectstudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ExpandableListView
+        android:id="@+id/el_myinvitation_senddynamic_selectstudent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null" >
+    </ExpandableListView>
+	<View 
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@color/listview_item"
+    />
+    <include
+        layout="@layout/no_items_listed"
+        android:visibility="gone" />
+
+</LinearLayout>

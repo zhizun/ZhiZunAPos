@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_my_invitation_selectstudent_item"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_myinvitation_selectstudent_item_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/cb_my_invitation_selectstudent_item_state"
+            android:background="@drawable/default_photo" />
+
+        <CheckBox
+            android:id="@+id/cb_my_invitation_selectstudent_item_state"
+            style="@style/custom_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_myinvitation_selectstudent_item_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <TextView
+                android:id="@+id/tv_myinvitation_selectstudent_item_age"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_myinvitation_selectstudent_item_sex"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <ImageView
+                android:id="@+id/iv_myinvitation_selectstudent_item_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:src="@drawable/sex_man" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_myinvitation_selectstudent_item_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/iv_myinvitation_selectstudent_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

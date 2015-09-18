@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_prized_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     <LinearLayout
+        android:id="@+id/common_constact"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_prizedevent_title_bar_receive"
+            style="@style/prize_group"
+            android:text="@string/title_text_share_prize" />
+        <Button
+            android:id="@+id/btn_prizedevent_title_bar_send"
+            style="@style/prize_offer"
+            android:text="@string/title_text_recommended_prize" />
+        <Button
+            android:id="@+id/btn_prizedevent_title_bar_preferential"
+            style="@style/prize_all"
+            android:text="@string/title_text_special_offer" />
+    </LinearLayout>
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_prized_event_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        />
+</LinearLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TableRow android:id="@+id/tr_list_attence_js_item_listviewitem_title" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1.4"
+            android:background="@color/bg_table_pink"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="姓名"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_zxdt"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="0.6"
+            android:background="@color/bg_table_pink"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="考勤"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1.4"
+            android:background="@color/bg_table_pink"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="备注"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_jtzy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1.4"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_listviewitem_stuname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text=""
+                android:ems="3"
+                android:maxLength="@string/max_person_familyname_len"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="0.6"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_list_attence_js_item_listviewitem_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:src="@drawable/kqyd_gray"
+                    android:tag="kqyd_gray" />
+
+                <ImageView
+                    android:id="@+id/iv_list_attence_js_item_listviewitem_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/kqwd_gray"
+                    android:tag="kqwd_gray" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_kq"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1.4"
+            android:gravity="center_vertical" >
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+           <ImageView
+                    android:id="@+id/iv_list_attence_js_item_listviewitem_bz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/kqbz_normal"
+                    android:tag="kqbz_gray"
+                    android:padding="5dp"
+                    />
+        </RelativeLayout>
+    </TableRow>
+
+</TableLayout>

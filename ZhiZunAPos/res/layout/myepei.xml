@@ -1,0 +1,582 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_myepei_techer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/rl_myepei_myinfo"
+        layout="@layout/myepei_common_titile" />
+
+    <include layout="@layout/myepei_common_myinfo" />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/im_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_invite" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_invite"
+            >
+	        <RelativeLayout
+		        android:id="@+id/rl_myepei_techer_myinvitation"
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tv_yh_list_title"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:text="我的邀请"
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_leveltwo_text_size_18" />
+		
+		        <TextView
+		            android:id="@+id/tv_myepei_invitecount"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/iv_myepei_arrow"
+		            android:text=""
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_levelfour_text_size_14" />
+		
+		        <ImageView
+		            android:id="@+id/iv_myepei_arrow"
+		            android:layout_width="15dp"
+		            android:layout_height="15dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="10dp"
+		            android:src="@drawable/arrow_right" />
+		        
+	    	</RelativeLayout>
+	    		<View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_myepei_techer_myagent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/im_myagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_agency" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_myagent"
+            >
+	        <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:background="@color/white"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" 
+		        >
+
+        <TextView
+            android:id="@+id/tv_yh_list_title_myagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="我的代理"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_myagent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+	    		<View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_myepei_techer_babyinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/im_babyinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_baby" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_babyinfo"
+            >
+	        <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tv_yh_list_title_babyinfo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:text="宝宝资料"
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_leveltwo_text_size_18" />
+		
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/iv_myepei_arrow"
+		            android:text=""
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_levelfour_text_size_14" />
+		
+		        <ImageView
+		            android:id="@+id/iv_myepei_arrow_babyinfo"
+		            android:layout_width="15dp"
+		            android:layout_height="15dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="10dp"
+		            android:src="@drawable/arrow_right" />
+		        
+	    	</RelativeLayout>
+	    		<View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_myepei_techer_prizedevent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/im_prizedevent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_prize" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_prizedevent"
+            >
+	        <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tv_yh_list_title_prizedevent"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:text="有奖活动"
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_leveltwo_text_size_18" />
+		
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/iv_myepei_arrow"
+		            android:text=""
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_levelfour_text_size_14" />
+		
+		        <ImageView
+		            android:id="@+id/iv_myepei_arrow_prizedevent"
+		            android:layout_width="15dp"
+		            android:layout_height="15dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="10dp"
+		            android:src="@drawable/arrow_right" />
+		        
+	    	</RelativeLayout>
+	    		<View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_myepei_techer_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/im_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_message" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_message"
+            >
+	        <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="45dp"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		        <TextView
+		            android:id="@+id/tv_yh_list_title_message"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:text="我的消息"
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_leveltwo_text_size_18" />
+				<TextView
+		            android:id="@+id/tv_myemessage_invitecount"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/iv_myepei_arrow_message"
+		            android:text=""
+		            android:textColor="@color/black"
+		            android:textSize="@dimen/title_levelfour_text_size_14" />
+		        <ImageView
+		            android:id="@+id/iv_myepei_arrow_message"
+		            android:layout_width="15dp"
+		            android:layout_height="15dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="10dp"
+		            android:src="@drawable/arrow_right" />
+		        
+	    	</RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rl_myepei_checkupdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/im__checkupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_update" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im__checkupdate"
+            >
+	        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_myepei_currentversion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_myepei_arrow_version"
+                    android:text="当前版本：V1.1.1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:id="@+id/iv_myepei_arrow_version"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/tv_myepei_checkupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="检查更新"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </RelativeLayout>
+            <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_myepei_loginpic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="帐号绑定"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_myepei_loginpic"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_myepei_sinaweibo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/default_photo" />
+
+            <ImageView
+                android:id="@+id/iv_myepei_sinaweibo1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/default_photo" />
+
+            <ImageView
+                android:id="@+id/iv_myepei_sinaweibo2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/default_photo" />
+
+            <ImageView
+                android:id="@+id/iv_myepei_sinaweibo3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/default_photo" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_registration_navigation_parent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/tv_myepei_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="意见反馈"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/category_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_registration_navigation_schoolmaster"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="帮助"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider"
+                android:visibility="gone" />
+	<RelativeLayout 
+         android:id="@+id/rl_myepei_about"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/im_myepei_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_about" 
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/im_myepei_about"
+            >
+	        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="关于益培"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </RelativeLayout>
+	    		
+        </LinearLayout>
+    </RelativeLayout>
+           <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dip"
+		        android:background="@color/myep_background" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

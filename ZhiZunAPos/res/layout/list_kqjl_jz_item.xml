@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <include layout="@layout/list_common_titile" />
+
+    <TextView
+        android:id="@+id/tv_yh_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" 
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="5dp"
+        />
+<include layout="@layout/list_common_shh_simple" />
+</LinearLayout>

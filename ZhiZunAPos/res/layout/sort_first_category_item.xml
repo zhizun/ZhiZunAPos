@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="30dp"
+    android:background="@color/transparent" >
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@drawable/bg_sort_item_text_color_selected"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+</FrameLayout>

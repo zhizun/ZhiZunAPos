@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_overlay_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar_activity_overlay"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/et_activity_overlay_addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_activity_overlay_submit"
+            android:drawableLeft="@drawable/search"
+            android:background="@drawable/bg_getidentifyingcode_button"
+            android:hint="请输入地址"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:text=""
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_activity_overlay_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_getidentifyingcode_button"
+            android:padding="9dp"
+            android:text="搜索"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_activity_overlay_search" />
+
+    <ImageView
+        android:id="@+id/iv_activity_overlay_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_activity_overlay_search"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/baidumap_ocation" />
+
+    <FrameLayout
+        android:id="@+id/fl_activity_overlay_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_baidumap_addr"
+        android:paddingTop="10dp" 
+        android:paddingBottom="20dp" 
+        android:paddingLeft="10dp" 
+        android:paddingRight="10dp" 
+        >
+
+        <TextView
+            android:id="@+id/tv_activity_overlay_addr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="郑州市航海西路"
+            android:textColor="#73B5FE"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/listview_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:baselineAligned="false"
+        android:background="@drawable/itembg"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/ll_sort_item_primary_category"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:listSelector="#00000000"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <GridView
+            android:id="@+id/ll_sort_item_second_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:numColumns="3"
+            android:background="@color/white"
+            android:horizontalSpacing="5dp"
+            android:stretchMode="columnWidth"
+            android:listSelector="#00000000" >
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grays_divider" />
+
+        <Button
+            android:id="@+id/bt_sort_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_button_apply"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="5dp"
+            android:text="重置"
+            android:textColor="@color/money_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grays_divider" />
+    </LinearLayout>
+    
+	<View
+        android:id="@+id/blank_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" >
+    </View>
+</LinearLayout>

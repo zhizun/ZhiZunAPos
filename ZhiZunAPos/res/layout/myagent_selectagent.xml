@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_myagent_selectagent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_myepei_techer_myinvitation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grays_backgroud"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_yh_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="您目前没有委托任何人代理班级事务管理，请选择代理老师:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/myep_background" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myagent_selectagent_selectteacher"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_yh_list_title_babyinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="选择老师"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_myagent_selectagent_agentteacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_myepei_arrow_babyinfo"
+            android:text=""
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_babyinfo"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/myep_background" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myagent_selectagent_endtime"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_yh_list_title_myagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="截止日期"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_myagent_selectagent_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_myepei_arrow_myagent"
+            android:text=""
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_myagent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/myep_background" />
+<View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@color/myep_background" />
+    <RelativeLayout
+        android:id="@+id/rl_myagent_selectagent_history"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_yh_list_title_myagent_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="查看历史"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_myagent_history"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/myep_background" />
+
+</LinearLayout>

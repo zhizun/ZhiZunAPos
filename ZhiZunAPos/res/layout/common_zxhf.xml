@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_common_zxhf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/title_bar_activity_zxdt_teacher"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_zxdt_zxhf"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="76dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_common_zxhf_zxhfcount"
+            style="@style/tab_msgnum_style"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_common_zxhf_zxhfcount"
+            android:text="最新回复"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</FrameLayout>

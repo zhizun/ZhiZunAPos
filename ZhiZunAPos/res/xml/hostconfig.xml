@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 为了ant打包时候正则匹配，请不要格式化该文件 -->
+<!-- <hostconfig>
+    <epeiwang_server>116.255.134.227/epeiwang</epeiwang_server>
+    <epeiwang_img_server>116.255.134.229</epeiwang_img_server>
+    <epeiwang_url>www.epeiwang.com</epeiwang_url>
+</hostconfig> -->
+<hostconfig>
+    <epeiwang_server>192.168.1.10:8090/epeiwang</epeiwang_server>
+    <!-- <epeiwang_server>192.168.1.10:8090/epw</epeiwang_server> -->
+    <epeiwang_img_server>192.168.1.9</epeiwang_img_server>
+    <epeiwang_url>192.168.1.10:8090</epeiwang_url>
+    <!-- <epeiwang_server>192.168.1.10:8090/epeiwang</epeiwang_server>
+    <epeiwang_img_server>192.168.1.9</epeiwang_img_server>
+    <epeiwang_url>192.168.1.10:8090</epeiwang_url> -->
+</hostconfig>

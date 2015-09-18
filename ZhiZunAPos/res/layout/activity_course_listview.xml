@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_course_tilte" />
+
+    <RadioGroup
+        android:id="@+id/course_contidon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RadioButton
+            android:id="@+id/rb_filter_category"
+            style="@style/text_sort_tab_item_background"
+            android:textColor="@drawable/selector_tab_background3"
+            android:drawableRight="@drawable/bg_sort_condition_radio_check_release"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="分类" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_item" />
+
+        <RadioButton
+            android:id="@+id/rb_filter_area"
+            style="@style/text_sort_tab_item_background"
+            android:textColor="@drawable/selector_tab_background3"
+            android:drawableRight="@drawable/bg_sort_condition_radio_check_release"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="附近" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_item" />
+
+        <RadioButton
+            android:id="@+id/rb_sort"
+            style="@style/text_sort_tab_item_background"
+            android:textColor="@drawable/selector_tab_background3"
+            android:drawableRight="@drawable/bg_sort_condition_radio_check_release"
+            android:paddingLeft="20dp"
+        	android:paddingRight="20dp"
+            android:text="排序" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/listview_item" />
+
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/ll_marketing_activities"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:clickable="true" />
+
+</LinearLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_org_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/headpic" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_comDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLength="10"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_org"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/tv_org_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/ll_image_l"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="郑州金苹果文化艺术中心"
+            android:textColor="@color/huodong_text"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <LinearLayout
+            android:id="@+id/ll_image_l"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+			android:orientation="horizontal"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+	            android:id="@+id/im_drr_image"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"
+	            android:layout_marginRight="5dp"
+	            android:src="@drawable/drr" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="2.5公里"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_orgclass"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingRight="5dp" >
+
+        <TextView
+            android:id="@+id/tv_org_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="1"
+            android:text="素描班"
+            android:textColor="@color/huodong_text"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <com.ch.epw.view.NoScrollListView
+            android:id="@+id/ll_markAvg"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:divider="@null" >
+        </com.ch.epw.view.NoScrollListView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="老师很耐心，提啊度很好，通过益培网报名获得了更多优惠，很满意"
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <com.ch.epw.view.NoScrollGridView
+        android:id="@+id/friends_list_phone_item_imagelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:verticalSpacing="5dp" >
+    </com.ch.epw.view.NoScrollGridView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_frie_felp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/bt_thank"
+                android:textColor="@color/gray_font" />
+
+            <Button
+                android:id="@+id/bt_thank"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_button_thank"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="感谢"
+                android:textColor="@color/darkblue_3" />
+
+            <TextView
+                android:id="@+id/tv_help_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/gray_font"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_help_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_font"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_comment_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/itembg"
+            android:layout_above="@+id/ll_oper_bar" />
+
+        <LinearLayout
+            android:id="@+id/ll_oper_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/delete_gray_3x"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="删除"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp" >
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/itembg" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/bt_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/edit_gray_3x"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="编辑"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/itembg" />
+            </FrameLayout>
+            
+            <Button
+                android:id="@+id/bt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/share_3x"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="分享"
+                android:textColor="@color/darkblue_3"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_teacher_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_logo" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+		android:layout_gravity="center_vertical|top"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/fl_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_below="@id/fl_teacher_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <TextView
+                android:id="@+id/tv_teacher_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/title_levelfour_text_size_14" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

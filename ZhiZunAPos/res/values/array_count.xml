@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <string-array name="count_name">
+        <item>价格：不限</item>
+        <item>区域：不限</item>
+    </string-array>   
+</resources>

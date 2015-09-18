@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simple_eeeeee"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_forgetpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/tv_yh_list_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/forgetpassword_yes" />
+
+    <TextView
+        android:id="@+id/tv_forget_password_step4_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/grays_forgetpassword_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <Button
+        android:id="@+id/btn_next_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_login_button"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+</LinearLayout>

@@ -11,6 +11,23 @@
             backward-compatibility can go here.
         -->
     </style>
+    
+    <style name="grey_line">
+        <item name="android:background">@color/grey_line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/line_width</item>
+    </style>
+    
+    <style name="nomal_black_text">
+        <item name="android:textSize">@dimen/nomal_text_size</item>
+        <item name="android:textColor">@color/app_black</item>
+    </style>
+    
+    <style name="nomal_blue_text">
+        <item name="android:textSize">@dimen/nomal_text_size</item>
+        <item name="android:textColor">@color/app_blue</item>
+    </style>
+    
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">

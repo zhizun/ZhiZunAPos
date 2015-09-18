@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selectstudent_button" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_dialog_selectsex_female"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_dialog_selectstudent_yes"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_selectstudent_button"
+            android:text="确定"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_dialog_selectstudent_no"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bg_selectstudent_button"
+            android:text="取消"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_selectsex_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ll_dialog_selectsex_female"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_dialog_selectsex_man"
+            style="@style/custom_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_dialog_selectstudent_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="男"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_selectsex_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/ll_dialog_selectsex_man"
+        android:layout_marginLeft="56dp"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_dialog_selectsex_female"
+            style="@style/custom_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_dialog_selectsex_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="女"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </LinearLayout>
+
+</RelativeLayout>

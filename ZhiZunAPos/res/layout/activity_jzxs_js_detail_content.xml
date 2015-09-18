@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <include layout="@layout/list_common_titile" />
+
+    <TextView
+        android:id="@+id/tv_list_zxdt_jz_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+    <com.ch.epw.view.NoScrollGridView
+        android:id="@+id/ngv_list_zxdt_jz_item_imagelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:horizontalSpacing="4dp"
+        android:numColumns="5" 
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:verticalSpacing="4dp">
+    </com.ch.epw.view.NoScrollGridView>
+
+    <include layout="@layout/list_jzxs_js_shh" />
+
+    <include layout="@layout/list_common_zan" />
+
+    <com.ch.epw.view.NoScrollListView
+        android:id="@+id/ll_list_zxdt_jz_item_commentlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+    </com.ch.epw.view.NoScrollListView>
+
+</LinearLayout>

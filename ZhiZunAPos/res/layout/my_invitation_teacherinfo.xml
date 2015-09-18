@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_my_invitation_teacherinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/my_invitation_teacherinfo_item" />
+
+    <TextView
+        android:id="@+id/tv_my_invitation_teacherinfo_invitestatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="已拒绝邀请"
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+</LinearLayout>

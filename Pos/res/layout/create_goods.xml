@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:orientation="vertical" 
+    android:background="#ffffff" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+
+              <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/goods_name"
+                    style="@style/nomal_black_text"/>
+                <RelativeLayout 
+                    android:id="@id/create_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtName" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext"
+                        style="@style/nomal_blue_text" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/goods_number"
+                    style="@style/nomal_black_text" />
+                <RelativeLayout 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtNumber" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="50.0dip" 
+                        android:singleLine="true" 
+                        android:imeOptions="actionNext"/>
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+         
+              <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/goods_amount"
+                    style="@style/nomal_black_text"/>
+                <RelativeLayout 
+                    android:id="@id/create_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtCount" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/goods_code"
+                    style="@style/nomal_black_text" />
+                <RelativeLayout 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <ImageView 
+                        android:id="@id/create_goods_imgScan" 
+                        android:background="@drawable/btn_stock_scan" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_margin="12.0dip" 
+                        android:layout_alignParentRight="true" 
+                        android:layout_centerVertical="true" />
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtCode" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent" 
+                        android:singleLine="true" 
+                        android:layout_toLeftOf="@id/create_goods_imgScan" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+ 
+              <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/goods_category"
+                    style="@style/nomal_black_text"/>
+                <RelativeLayout 
+                    android:id="@id/create_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_txtCateGory" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+          
+              <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/stockprice"
+                    style="@style/nomal_black_text"/>
+                <RelativeLayout 
+                    android:id="@id/create_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtStockPrice" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+
+              <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:background="#ffffff" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:gravity="center" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/saleprice"
+                    style="@style/nomal_black_text"/>
+                <RelativeLayout 
+                    android:id="@id/create_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <EditText 
+                        android:gravity="center_vertical" 
+                        android:id="@id/create_goods_edtSalePrice" 
+                        android:background="@null" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true" 
+                        android:imeOptions="actionNext" />
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:id="@id/create_goods_linUploadPicture" 
+                android:background="#ffffff"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <ImageView 
+                    android:gravity="center" 
+                    android:id="@id/create_goods_imgPicture" 
+                    android:layout_width="100.0dip" 
+                    android:layout_height="wrap_content" 
+                    android:src="@drawable/ic_goods_default"/>
+                <RelativeLayout 
+                    android:id="@id/edit_goods_relTime" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="50.0dip">
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content">
+                        <TextView 
+                            android:gravity="center_vertical" 
+                            android:layout_width="0.0dip" 
+                            android:layout_height="50.0dip" 
+                            android:text="@string/upload_picture" 
+                            android:layout_weight="1.0"/>
+                        <ImageView 
+                            android:background="@drawable/btn_upload" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:layout_margin="12.0dip" />
+                    </LinearLayout>
+                    <View 
+                        android:layout_alignParentBottom="true" 
+                        style="@style/grey_line" />
+                </RelativeLayout>
+            </LinearLayout>
+    
+    <LinearLayout 
+        android:gravity="center" 
+        android:layout_gravity="bottom" 
+        android:orientation="horizontal" 
+        android:id="@id/create_goods_linSave" 
+        android:background="@drawable/btn_save_bg" 
+        android:layout_width="fill_parent" 
+        android:layout_height="45.0dip" 
+        android:layout_margin="20.0dip" 
+        android:layout_marginBottom="20.0dip">
+        <ImageView 
+            android:background="@drawable/ic_sure_mark" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" />
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="8.0dip" 
+            android:text="@string/save" />
+    </LinearLayout>

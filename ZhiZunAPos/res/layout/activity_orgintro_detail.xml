@@ -1,0 +1,357 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_org_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.ch.epw.view.StickyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_org_intro_call"
+        android:layout_below="@+id/title_bar_org_intro" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 机构logo、名称及地址 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_orginfo_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_org_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/default_logo" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|top"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical" >
+
+                        <FrameLayout
+                            android:id="@+id/fl_tv_orgname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_orgname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/title_levelthree_text_size_16" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fl_tv_orgname"
+                            android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:id="@+id/tv_orgaddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:lineSpacingMultiplier="1.2"
+                                android:textColor="@color/gray_font"
+                                android:textSize="@dimen/title_levelfour_text_size_14" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 全部课程 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_courselist_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:tag="sticky"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/test_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="全部课程 "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/itembg" />
+
+                    <com.ch.epw.view.NoScrollListView
+                        android:id="@+id/nsl_courselist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null" >
+                    </com.ch.epw.view.NoScrollListView>
+                </LinearLayout>
+                <!-- 机构介绍-->
+
+                <LinearLayout
+                    android:id="@+id/ll_org_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:tag="sticky"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/ll_org_introduce_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="机构介绍"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/itembg" />
+					<TextView 
+					    android:id="@+id/ngv_org_introduce_content"
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:lineSpacingMultiplier="1.2"
+					    android:padding="5dp"
+					    />
+                    <!-- <com.ch.epw.view.NoScrollGridView
+                        android:id="@+id/ngv_org_introduce_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="4dp" >
+                    </com.ch.epw.view.NoScrollGridView> -->
+                </LinearLayout>
+
+                <!-- 机构环境 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_envpiclist_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:tag="sticky"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/ll_envpiclist_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="机构环境"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/itembg" />
+
+                    <com.ch.epw.view.NoScrollGridView
+                        android:id="@+id/ngv_envpiclist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="4dp" >
+                    </com.ch.epw.view.NoScrollGridView>
+                </LinearLayout>
+
+                <!-- 荣誉展示 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_awardpiclist_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:tag="sticky"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/ll_awardpiclist_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="荣誉展示"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/itembg" />
+
+                    <com.ch.epw.view.NoScrollGridView
+                        android:id="@+id/ngv_awardpiclist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="4dp" >
+                    </com.ch.epw.view.NoScrollGridView>
+                </LinearLayout>
+
+                <!-- 名师团队 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_teacherlist_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:tag="sticky"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/ll_teacherlist_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="名师团队"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/itembg" />
+
+                    <com.ch.epw.view.NoScrollListView
+                        android:id="@+id/nsl_teacherlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null" >
+                    </com.ch.epw.view.NoScrollListView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_top_sticky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+                <View   
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:background="@drawable/itembg" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.ch.epw.view.StickyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_org_intro_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grays_backgroud"
+        android:paddingBottom="15dp"  >
+		<View android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/grays_divider"
+		   	android:layout_alignParentTop="true"/>
+        <TextView
+            android:id="@+id/tv_org_intro_call_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:text="电话咨询"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_org_intro_call_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_org_intro_call_text"
+            android:layout_toLeftOf="@+id/tv_org_intro_call_text"
+            android:src="@drawable/course_phone" />
+    </RelativeLayout>
+
+</RelativeLayout>

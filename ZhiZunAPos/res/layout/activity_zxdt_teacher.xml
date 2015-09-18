@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_zxdt_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/ll_activity_zxdt_teacher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar_activity_zxdt_teacher"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+    <include layout="@layout/common_zxhf" />
+
+    
+
+</RelativeLayout>

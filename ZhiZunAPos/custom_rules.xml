@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="custom_rules" >
+
+    <!-- 引用ant-contlib这个扩展包，声明一下 -->
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties" >
+
+        <classpath>
+
+            <pathelement location="${ant.ANT_HOME}/lib/ant-contrib-1.0b3.jar" />
+        </classpath>
+    </taskdef>
+    <!-- 定义一个时间变量，打完包后跟渠道号一起命名apk -->
+
+    <tstamp>
+
+        <format
+            pattern="yyyyMMddhhmm"
+            property="pktime"
+            unit="hour" />
+    </tstamp>
+    <!-- 创建apk存放目录 -->
+
+    <mkdir dir="${apk.dir}" >
+    </mkdir>
+
+    <!-- 替换参数 然后打包APK -->
+
+    <target name="replace_parameter" >
+
+        <!-- 替换服务器配置 -->
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            flags="g" >
+
+            <!-- 这个是正则表达式匹配hostconfig中epeiwang_server的值 -->
+
+            <regexp pattern="epeiwang_server>(.*)&lt;/epeiwang_server" />
+
+            <substitution expression="epeiwang_server>${server_url}&lt;/epeiwang_server" />
+
+            <fileset
+                dir=""
+                includes="res/xml/hostconfig.xml" />
+        </replaceregexp>
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            flags="g" >
+
+            <!-- 这个是正则表达式匹配hostconfig中epeiwang_img_server的值 -->
+
+            <regexp pattern="epeiwang_img_server>(.*)&lt;/epeiwang_img_server" />
+
+            <substitution expression="epeiwang_img_server>${server_image_url}&lt;/epeiwang_img_server" />
+
+            <fileset
+                dir=""
+                includes="res/xml/hostconfig.xml" />
+        </replaceregexp>
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            flags="g" >
+
+            <!-- 这个是正则表达式匹配hostconfig中epeiwang_url的值 -->
+
+            <regexp pattern="epeiwang_url>(.*)&lt;/epeiwang_url" />
+
+            <substitution expression="epeiwang_url>${epeiwang_url}&lt;/epeiwang_url" />
+
+            <fileset
+                dir=""
+                includes="res/xml/hostconfig.xml" />
+        </replaceregexp>
+    </target>
+
+    <!-- 打包测试环境命令就用这个 -->
+
+    <target name="deploytest" >
+
+        <!-- 传服务器配置参数到 replace_parameter这个打包target -->
+
+        <antcall target="replace_parameter" >
+
+            <param
+                name="server_url"
+                value="${test.server.url}" />
+
+            <param
+                name="server_image_url"
+                value="${test.server.image.url}" />
+
+            <param
+                name="epeiwang_url"
+                value="${test.epeiwang.url}" />
+        </antcall>
+        <!-- 执行循环打包target foreach_replacechannel -->
+
+        <antcall target="foreach_replacechannel" >
+
+            <!-- apk命名时候用到的参数 -->
+
+            <param
+                name="deploy_environment"
+                value="${test.tag.name}" />
+        </antcall>
+    </target>
+
+    <!-- 打包生产环境命令就用这个 -->
+
+    <target name="deployrel" >
+
+        <!-- 传服务器配置参数到 replace_parameter这个打包target -->
+
+        <antcall target="replace_parameter" >
+
+            <param
+                name="server_url"
+                value="${rel.server.url}" />
+
+            <param
+                name="server_image_url"
+                value="${rel.server.image.url}" />
+
+            <param
+                name="epeiwang_url"
+                value="${rel.epeiwang.url}" />
+        </antcall>
+        <!-- 执行循环打包target foreach_replacechannel -->
+
+        <antcall target="foreach_replacechannel" >
+
+            <!-- apk命名时候用到的参数 -->
+
+            <param
+                name="deploy_environment"
+                value="${release.tag.name}" />
+        </antcall>
+    </target>
+
+    <!-- 循环打包的target -->
+
+    <target name="foreach_replacechannel" >
+
+        <!-- 开始循环打包，从market_channels参数中取出一个渠道号用channel标识，然后通过正则修改manifest文件 -->
+
+        <foreach
+            delimiter=","
+            list="${market_channels}"
+            param="channel"
+            target="modify_manifest" >
+        </foreach>
+    </target>
+
+    <target name="modify_manifest" >
+
+        <replaceregexp
+            byline="false"
+            encoding="UTF-8"
+            flags="g" >
+
+            <!--
+这个是正则表达式匹配manifest中meta，我用的友盟的统计，我 AndroidManifest中的配置为：
+<meta-data android:value="360shichang" android:name="UMENG_CHANNEL"
+            -->
+
+            <regexp pattern="android:value=&quot;(.*)&quot; android:name=&quot;UMENG_CHANNEL&quot;" />
+
+            <substitution expression="android:value=&quot;${channel}&quot; android:name=&quot;UMENG_CHANNEL&quot;" />
+
+            <fileset
+                dir=""
+                includes="AndroidManifest.xml" />
+        </replaceregexp>
+        <!-- 这里设置最终生成包的存放目录以及apk的名称，注意这里是文件名称，所以变量中不允许出现违规字符，否则将无法生成最终的apk（会出现output is not valid 的错误） -->
+
+        <property
+            name="out.final.file"
+            location="${apk.dir}/${app.name}_${channel}_${deploy_environment}_${pktime}.apk" />
+
+        <antcall target="clean" />
+
+        <antcall target="release" />
+    </target>
+
+</project>

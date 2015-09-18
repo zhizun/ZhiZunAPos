@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 47 Degrees, LLC
+  ~  http://47deg.com
+  ~  hello@47deg.com
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/red"
+        android:gravity="center|right"
+        android:tag="back" >
+
+        <TextView
+            android:id="@+id/tv_package_row_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="退出"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_list_babyinfo_org_item_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_below="@+id/re" 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true" >
+
+                <TextView
+                    android:id="@+id/tv_list_babyinfo_org_item_claname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="所属班级"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:id="@+id/re"
+                >
+                <TextView
+                    android:id="@+id/tv_list_babyinfo_org_item_orgname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    android:text="所属机构"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

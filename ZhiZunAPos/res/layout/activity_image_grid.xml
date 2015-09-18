@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/darkblue_3" >
+
+        <ImageView
+            android:id="@+id/title_iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_left" />
+
+        <RelativeLayout
+            android:id="@+id/rl_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="选择图片"
+                android:textColor="@color/main_title_text"
+            	android:shadowColor="@color/title_shadow"
+		        android:shadowDx="0"
+		        android:shadowDy="1"
+		        android:shadowRadius="3"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:layout_below="@+id/rl_title_bar"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"
+        android:layout_above="@+id/rl_activity_image_grid_bottombar"
+        android:scrollbars="none"
+        android:verticalSpacing="8dp" >
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/rl_activity_image_grid_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grays_divider" />
+
+        <Button
+            android:id="@+id/bt"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_nobgd"
+            android:text="完成"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

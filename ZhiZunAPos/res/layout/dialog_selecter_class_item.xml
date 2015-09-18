@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp" >
+
+    <CheckBox
+        android:id="@+id/cb_dialog_selecter_class_item_state"
+        style="@style/custom_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tv_dialog_selecter_class_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/cb_dialog_selecter_class_item_state"
+        android:singleLine="true"
+        android:text="美术一班"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+</RelativeLayout>

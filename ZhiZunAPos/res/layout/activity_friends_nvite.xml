@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_friends_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/im_invite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/logo_wechat" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_invite"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_myfriends_weixin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_yh_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="微信好友"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:id="@+id/iv_myepei_arrow"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/im_invite_weixin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/logo_wechatmoments" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_invite_weixin"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_myfriends_weixinfriends"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="微信朋友圈"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/im_invite_qq"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/logo_qq" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_invite_qq"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_myfriends_qq"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="QQ好友"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/im_invite_qz"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/logo_qzone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_invite_qz"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_myfriends_qz"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="QQ空间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+     <RelativeLayout
+         android:id="@+id/rl_myfriends_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/im_invite_phone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/phone_h" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_invite_phone"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="手机通讯录联系人"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grays_divider" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

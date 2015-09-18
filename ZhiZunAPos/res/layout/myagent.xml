@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_myepei_techer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myagent_agented"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" 
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_myagent_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <LinearLayout
+            android:id="@+id/ll_myagent_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_myagent_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/endtime_img"
+                android:drawablePadding="5dp"
+                android:text="失效时间:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_myagent_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_myagent_cancelagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_myagent_endtime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_getidentifyingcode_button"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="取消代理"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/lv_myagent_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/myagent_selectagent" />
+
+</LinearLayout>

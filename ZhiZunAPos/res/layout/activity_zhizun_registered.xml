@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:background="@color/white">
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_zhizun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+            android:id="@+id/ll_phone_login"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+             >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+				<TextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="手机号码"
+				    android:textSize="@dimen/title_leveltwo_text_size_18"
+				    />
+                <EditText
+                    android:id="@+id/phone_login_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:numeric="integer"
+                    android:hint="请输入手机号"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/phone_category_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grays_divider" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+				<TextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="设置密码"
+				    android:textSize="@dimen/title_leveltwo_text_size_18"
+				    />
+                <EditText
+                    android:id="@+id/phone_login_passoad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="请输入密码"
+                    android:numeric="integer"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/phone_category_li"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grays_divider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                >
+				<TextView
+				    android:id="@+id/im_phone_verification_code"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="短信验证"
+				    android:layout_marginTop="10dp"
+				    android:textSize="@dimen/title_leveltwo_text_size_18"
+				    />
+                <EditText
+                    android:id="@+id/phone_login_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/im_phone_verification_code"
+                    android:layout_toLeftOf="@+id/tv_forget_passrword_timer"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:numeric="integer"
+                    android:hint="请输入短信验证码"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+                <TextView
+                    android:id="@+id/tv_forget_passrword_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/title_zhizun"
+                    android:padding="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/white"
+                   android:text="短信验证"
+                    android:textSize="@dimen/title_levelfour_text_size_14" />
+            </RelativeLayout>
+            <CheckBox
+                    android:id="@+id/cb_is_anonymous"
+                    style="@style/custom_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="我同意使用协议"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+
+</LinearLayout>

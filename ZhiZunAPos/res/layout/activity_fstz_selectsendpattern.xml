@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_selectsendpattern_ljfs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp" >
+
+        <CheckBox
+            android:id="@+id/cb_activity_fstz_selectsendpattern_lifs_state"
+            style="@style/custom_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_selectsendpattern_ljfs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cb_activity_fstz_selectsendpattern_lifs_state"
+            android:singleLine="true"
+            android:text="@string/title_text_sendnotice_immediately"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/category_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_selectsendpattern_dsfs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp" >
+
+        <CheckBox
+            android:id="@+id/cb_activity_fstz_selectsendpattern_dsfs_state"
+            style="@style/custom_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_selectsendpattern_dsfs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cb_activity_fstz_selectsendpattern_dsfs_state"
+            android:singleLine="true"
+            android:text="@string/title_text_sendnotice_timing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <ImageView
+            android:id="@+id/iv_activity_fstz_selectsendpattern_arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_selectsendpattern_dsfs_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/iv_activity_fstz_selectsendpattern_arrow_right"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+
+</LinearLayout>

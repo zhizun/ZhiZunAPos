@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    >
+
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/ll_activity_zxdt_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+    <include layout="@layout/common_zxhf" android:visibility="gone"/>
+
+</RelativeLayout>

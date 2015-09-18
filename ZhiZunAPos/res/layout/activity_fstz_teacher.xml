@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_fstz_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_activity_fstz_teacher_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="请输入您想发送的通知..."
+            android:inputType="textMultiLine"
+            android:padding="10dp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_activity_fsdt_teacher_content_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:text="0/500"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" >
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_activity_fstz_teacher_noticetemplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_getidentifyingcode_button"
+        android:padding="10dp"
+        android:text="@string/notice_templete" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_teacher_receviers"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_teacher_receivers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           	android:layout_toRightOf="@+id/tv_yh_list_title"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_activity_fstz_teacher_receivers_count"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_teacher_receivers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_myepei_arrow_version"
+            android:text=""
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_version"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_yh_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="接收人"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+ <!--
+    <View
+        android:id="@+id/category_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_teacher_pattern"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_activity_fstz_teacher_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_teacher_text_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_activity_fstz_teacher_img"
+            android:text="@string/title_text_sendnotice_immediately"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="发送模式"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+   
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_teacher_sendsms"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_activity_fstz_teacher_imglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_button_sendsms" />
+
+        <TextView
+            android:id="@+id/tv_activity_fstz_teacher_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_activity_fstz_teacher_imglogo"
+            android:text="发送短信"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+-->
+
+</LinearLayout>

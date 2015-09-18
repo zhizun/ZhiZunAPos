@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/il_notice_receivebox_detail_title_bar"
+        layout="@layout/notice_detail_title_bar" />
+
+    <ScrollView
+        android:id="@+id/sl_notice_receivebox_detail_title_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/il_notice_receivebox_detail_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rl_notice_receivebox_detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_notice_receivebox_detail_title_receivetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发送时间："
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_notice_receivebox_detail_title_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_notice_receivebox_detail_title_receivetime"
+                    android:layout_marginTop="10dp"
+                    android:text="发送人："
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_notice_receivebox_detail_title_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_notice_receivebox_detail_title_sender"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_notice_receivebox_detail_title_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接收人："
+                        android:textColor="@color/gray_font"
+                        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_notice_receivebox_detail_receiver_short"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_notice_receivebox_detail_title_btnishow"
+                        android:layout_toRightOf="@+id/tv_notice_receivebox_detail_title_receiver" >
+
+                        <TextView
+                            android:id="@+id/tv_notice_receivebox_detail_title_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/tv_notice_receivebox_detail_title_sendsms"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title_leveltwo_text_size_18" />
+                        
+                        <TextView
+                            android:id="@+id/tv_notice_receivebox_detail_title_sendsms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:singleLine="true"
+                            android:text="共0人"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title_leveltwo_text_size_18"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_notice_receivebox_detail_title_btnishow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                    <TextView
+                        android:id="@+id/tv_notice_receivebox_detail_title_receiversinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/rl_notice_receivebox_detail_receiver_short"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_notice_receivebox_detail_title_btnishow"
+                        android:layout_marginRight="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text=""
+                        android:textSize="@dimen/title_levelthree_text_size_17"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_notice_receivebox_detail_title_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_notice_receivebox_detail_title"
+                android:background="@color/grays_divider" >
+            </View>
+
+            <TextView
+                android:id="@+id/tv_notice_receivebox_detail_title_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_notice_receivebox_detail_title_divider"
+                android:lineSpacingExtra="3dp"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" >
+            </TextView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/v_notice_receivebox_detail_title_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/il_my_notice_detail_bottom_bar"
+        android:background="@color/grays_divider" >
+    </View>
+
+    <include
+        android:id="@+id/il_my_notice_detail_bottom_bar"
+        layout="@layout/my_noticesendbox_detail_bottom_bar" />
+
+</RelativeLayout>

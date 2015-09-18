@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp" >
+    <TextView
+        android:id="@+id/tv_picker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-04-25 15:00"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="5dp"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="领取人"
+        android:textColor="@color/gray"
+        android:layout_toRightOf="@+id/tv_picker_time"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_isdeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否成交"
+        android:layout_toRightOf="@+id/tv_picker"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/gray"
+        android:textSize="14dp"/>
+
+</RelativeLayout>

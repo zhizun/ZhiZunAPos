@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_notice_receivebox_detail_title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/tv_list_jtzy_js_item_title_sendtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送时间："
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_list_jtzy_js_item_title_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_list_jtzy_js_item_title_sendtime"
+        android:layout_marginTop="5dp"
+        android:text="发送人："
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <RelativeLayout
+        android:id="@+id/ll_list_jtzy_js_item_title_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_list_jtzy_js_item_title_sender"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/tv_notice_receivebox_detail_title_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收人："
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <RelativeLayout
+            android:id="@+id/rl_list_jtzy_js_item_title_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_list_jtzy_js_item_title_btnishow"
+            android:layout_toRightOf="@+id/tv_notice_receivebox_detail_title_receiver" >
+
+            <TextView
+                android:id="@+id/tv_list_jtzy_js_item_title_short"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/tv_list_jtzy_js_item_title_receivecount"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_jtzy_js_item_title_receivecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="共0人"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/darkblue"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_list_jtzy_js_item_title_btnishow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/show_more"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_notice_receivebox_detail_title_receiversinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rl_list_jtzy_js_item_title_short"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_list_jtzy_js_item_title_btnishow"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="3dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="@dimen/title_levelthree_text_size_16"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

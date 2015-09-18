@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <com.ch.epw.view.TitleBarView
+	        android:id="@+id/title_bar_myepei_message"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+
+    <com.ch.epw.view.StickyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom_send_message"
+        android:layout_below="@+id/title_bar_myepei_message" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|top"
+                        android:padding="10dp"
+                        android:orientation="vertical" >
+                            <TextView
+                                android:id="@+id/tv_system_message_title"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/title_leveltwo_text_size_18"
+                                />
+                            <TextView
+                                android:id="@+id/tv_system_message_time"
+                                android:layout_below="@+id/tv_system_message_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textColor="@color/gray_font"
+                                android:textSize="@dimen/title_levelfour_text_size_14" />
+                    </RelativeLayout>
+                   		 <View 
+                   		     android:id="@+id/view_message"
+						        android:layout_width="fill_parent"
+						        android:layout_height="1dp"
+						        android:background="@color/grays_divider" />
+                                <WebView
+							        android:id="@+id/tv_message_content"
+							        android:layout_width="fill_parent"
+							        android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.ch.epw.view.StickyScrollView>
+    <LinearLayout 
+        android:id="@+id/ll_bottom_send_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_title"
+        android:visibility="gone"
+        >
+	    <TextView 
+	        android:id="@+id/tv_huifu"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="查看回复"
+	        android:textColor="@color/main_title_text"
+	        android:gravity="center"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginBottom="15dp"
+	        android:textSize="@dimen/title_leveltwo_text_size_18"
+	        />
+	</LinearLayout> 
+</RelativeLayout>

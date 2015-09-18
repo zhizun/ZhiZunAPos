@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:store="http://schemas.android.com/apk/res/com.zhizun.pos">
+    <LinearLayout 
+        android:gravity="center_vertical" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <include 
+            android:id="@id/layout_slidelist_search" 
+            android:layout_width="0.0dip" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="@dimen/search_bar_horizontal_margin" 
+            android:layout_marginTop="@dimen/search_bar_vertical_margin" 
+            android:layout_marginRight="@dimen/search_bar_horizontal_margin" 
+            android:layout_marginBottom="@dimen/search_bar_vertical_margin" 
+            android:layout_weight="1.0" 
+            layout="@layout/layout_search" />
+        <ImageView 
+            android:id="@id/activity_storage_imgScan" 
+            android:background="@drawable/btn_stock_scan" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginRight="@dimen/storage_margin" />
+    </LinearLayout>
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:background="@color/white" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <com.zhizun.pos.ui.widget.GroupSeleteView 
+            android:id="@id/activity_storage_lsvGroup" 
+            android:background="@color/grey_bg" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="2.0" 
+            store:rank_name="@string/sale_rank" 
+            style="@style/listview_noselector_style" />
+        <ListView 
+            android:id="@id/listview_sales_product" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_marginLeft="@dimen/storage_margin" 
+            android:layout_weight="5.0" 
+            style="@style/listview_style" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_activity_friends_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         >
+         <FrameLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_above="@+id/is_ch"
+	         >
+	        <ListView
+	            android:id="@+id/lv_listview"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="center"
+	            android:divider="@null" />
+	
+	        <TextView
+	            android:id="@+id/dialog"
+	            android:layout_width="80.0dip"
+	            android:layout_height="80.0dip"
+	            android:layout_gravity="center"
+	            android:background="@drawable/show_head_toast_bg"
+	            android:gravity="center"
+	            android:textColor="#ffffffff"
+	            android:textSize="30.0dip"
+	            android:visibility="invisible" />
+	
+	        <com.ch.epw.phone.view.SideBar
+	            android:id="@+id/sidrbar"
+	            android:layout_width="30.0dip"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="right|center" />
+    </FrameLayout>
+		    <RelativeLayout 
+		        android:id="@+id/is_ch"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        >
+		    <CheckBox           
+			    android:id="@+id/title_check_box"
+		        style="@style/custom_checkbox"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="批量邀请"
+		        android:paddingLeft="10dp"
+		        android:checked="false"
+		        android:textColor="#336598"
+		        android:layout_marginLeft="10dip"
+		        android:paddingTop="15dip"
+		        android:paddingBottom="15dip"
+		        android:textSize="@dimen/title_levelfour_text_size_14" />
+		    <TextView 
+		        android:id="@+id/phone_size"
+		        android:layout_toRightOf="@+id/title_check_box"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="size"
+		        android:paddingTop="15dip"
+		        android:paddingBottom="15dip"
+		        android:layout_marginLeft="25dp"
+		        />
+		    <TextView 
+		        android:id="@+id/tv_yaoqing"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="邀请加入"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:textColor="@color/white"
+		        android:padding="10dp"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp"
+		        android:background="@color/darkblue_3"
+		        />
+		    </RelativeLayout>
+	</RelativeLayout>
+</LinearLayout>

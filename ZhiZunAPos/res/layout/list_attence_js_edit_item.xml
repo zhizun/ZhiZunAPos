@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_tv_list_attence_js_item_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_classname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tv_list_attence_js_item_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_attenceinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="已到/未到：5/0"
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grays_divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_list_attence_js_item_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+<!-- 
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_xhks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消耗课时："
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <ImageView
+                    android:id="@+id/iv_list_attence_js_item_xhks_reduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_textview_border"
+                    android:padding="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/reduce" />
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_xhks_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_textview_border"
+                    android:gravity="center_vertical"
+                   
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_list_attence_js_item_xhks_increase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_textview_border"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/increase" />
+            </LinearLayout>
+ -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记录人："
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_list_attence_js_item_username_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <com.ch.epw.view.NoScrollListView
+                android:id="@+id/nl_list_attence_js_item_attencelist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" >
+            </com.ch.epw.view.NoScrollListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

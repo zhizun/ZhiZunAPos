@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_my_invitation_selectstudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_my_invitation_selectstudent_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/title_bar_my_invitation_selectstudent"
+        android:lineSpacingExtra="3dp"
+        android:text=""
+        android:textSize="@dimen/title_leveltwo_text_size_18" >
+    </TextView>
+
+    <ListView
+        android:id="@+id/nl_my_invitation_selectstudent_childlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/tv_my_invitation_selectstudent_title"
+        android:layout_above="@+id/btn_my_invitation_selectstudent_submit"
+        android:clickable="true"
+        >
+    </ListView>
+
+
+    <Button
+        android:id="@+id/btn_my_invitation_selectstudent_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_login_button"
+        android:text="提交"
+        android:textColor="@color/white" >
+    </Button>
+
+</RelativeLayout>

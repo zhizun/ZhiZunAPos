@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_list_myepei_myclass_parent_item_stuname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/gray_font"
+        android:textSize="18sp" >
+    </TextView>
+
+    <ExpandableListView
+        android:id="@+id/el_list_myepei_myclass_parent_item_teacherlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:groupIndicator="@null" >
+    </ExpandableListView>
+	<View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/itembg"
+        />
+</LinearLayout>

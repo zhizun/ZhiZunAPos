@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_registration_xiaozhang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" 
+            android:src="@drawable/default_photo"/>
+
+        <TextView
+            android:id="@+id/tv_registration_xiaozhang_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gray_font"
+            android:text="请用电脑访问以下地址开通" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_registration_xiaozhang_txt"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="www.hao123.com" />
+
+    </RelativeLayout>
+
+</LinearLayout>

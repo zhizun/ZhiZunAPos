@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_myagent_agented"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_myagent_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="您目前正在代理 李琳琳老师 的班级事务管理：美术一班 美术二班"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <LinearLayout
+            android:id="@+id/ll_myagent_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_myagent_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/endtime_img"
+                android:drawablePadding="5dp"
+                android:text="截止日期:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_myagent_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015-04-17 15:23"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/grays_divider"
+	    android:paddingTop="1dp"
+	    >
+        <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/activity_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+	            <RadioButton
+	                android:id="@+id/radiobutton_sy"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_main_btn_selector"
+	                android:text="首页"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	            <RadioButton
+	                android:id="@+id/radiobutton_hd"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_interact_btn_selector"
+	                android:text="来往单位"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	            
+	            <RadioButton
+	                android:id="@+id/radiobutton_wd"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_myepei_btn_selector"
+	                android:text="发现"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	        </RadioGroup>
+	        <ImageView
+	            android:id="@+id/tv_message"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="30dp"
+	            android:layout_marginTop="12dp"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/message_remind"
+	            android:visibility="gone"
+	            />
+        </RelativeLayout>
+    </LinearLayout>
+
+</TabHost>

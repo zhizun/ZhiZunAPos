@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_invitation_parentinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_yh_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="收到的邀请"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+    <com.ch.epw.widget.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_my_invitation_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+</LinearLayout>

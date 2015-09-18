@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true" >
+
+    <TextView
+        android:id="@+id/tv_list_star_listview_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:text="综合评分"
+        android:visibility="gone"
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <RatingBar
+        android:id="@+id/rb_list_star_listview_item_ratingbar"
+        style="@style/ratingbar_course_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_list_star_listview_item_title"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1" />
+
+</RelativeLayout>

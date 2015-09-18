@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/title_zhizun" >
+
+	<RelativeLayout
+	    android:id="@+id/rl_area_left"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="20dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignLeft="@+id/title_txt"
+	    android:layout_toLeftOf="@+id/title_txt" >
+		
+	    <Button
+	        android:id="@+id/title_btn_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:background="@null"
+	        android:padding="2dp"
+	        android:src="@color/common_title"
+	        android:textColor="@color/blue"
+	        android:textSize="16sp" />
+	
+	    <TextView
+	        android:id="@+id/title_tv_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:shadowColor="@color/title_shadow"
+	        android:textColor="@color/main_title_text"
+	        android:textSize="18sp" />
+
+	    <com.zhizun.pos.widget.circularimage.CircularImage
+	        android:id="@+id/title_iv_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp" />
+	</RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:shadowColor="@color/title_shadow"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+	<RelativeLayout
+	    android:id="@+id/rl_area_right"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="20dp"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_toRightOf="@+id/title_txt"
+	    android:layout_alignRight="@+id/title_txt">
+
+	    <Button
+	        android:id="@+id/title_btn_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="10dp"
+	        android:padding="2dp"
+	        android:background="@null"
+	        android:src="@color/common_title" />
+	
+	    <TextView
+	        android:id="@+id/title_tv_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:paddingBottom="10dp"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="10dp"
+	        android:shadowColor="@color/title_shadow"
+	        android:textColor="@color/main_title_text"
+	        android:textSize="18sp" />
+
+	</RelativeLayout>
+</RelativeLayout>

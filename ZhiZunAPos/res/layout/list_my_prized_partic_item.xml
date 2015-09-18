@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp" >
+
+    <ImageView
+        android:id="@+id/im_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/im_logo"
+        android:layout_marginLeft="5dp"
+        android:text="2015-04-25 15:00"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="分享成功"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="(不符合活动规则)"
+        android:textSize="10dp" 
+        android:visibility="gone"
+        android:layout_below="@+id/tv_content"
+        />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

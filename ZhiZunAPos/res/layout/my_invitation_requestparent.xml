@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_myinvitation_requestparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_my_invitation_school_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/title_bar_myinvitation_requestparent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="邀请机构"
+        android:textColor="@color/progressbar_app"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <include
+        android:id="@+id/ll_my_invitation_requestschool"
+        layout="@layout/my_invitation_requestschool_item" />
+
+    <TextView
+        android:id="@+id/tv_my_invitation_requester_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/ll_my_invitation_requestschool"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="邀请人"
+        android:textColor="@color/progressbar_app"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_my_invitation_studentinfo_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/my_invitation_requstparent_requster"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="学员信息"
+        android:textColor="@color/progressbar_app"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <include layout="@layout/my_invitation_requeststudentinfo_item"  />
+
+    <include layout="@layout/my_invitation_bottom_bar" />
+
+    <include
+        android:id="@+id/my_invitation_requstparent_requster"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_my_invitation_requester_title"
+        layout="@layout/my_invitation_requster_item" />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_user_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_logo" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_comment_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <com.ch.epw.view.NoScrollListView
+                android:id="@+id/ll_course_comment_starlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+            </com.ch.epw.view.NoScrollListView>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <com.ch.epw.view.NoScrollGridView
+        android:id="@+id/gv_pic_gridlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp" >
+    </com.ch.epw.view.NoScrollGridView>
+
+    <TextView
+        android:id="@+id/tv_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelfour_text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_comment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_font"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="@dimen/title_levelfour_text_size_14" />
+
+</LinearLayout>

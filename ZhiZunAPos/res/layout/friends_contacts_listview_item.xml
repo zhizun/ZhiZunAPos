@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#E0E0E0"
+        android:textColor="#454545"
+        android:layout_weight="1.0"
+        android:paddingLeft="10dip"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:text="A"/>
+    <RelativeLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+        >
+	<CheckBox           
+	    android:id="@+id/title"
+        style="@style/custom_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系人"
+        android:paddingLeft="10dp"
+        android:checked="false"
+        android:textColor="#336598"
+        android:layout_marginLeft="10dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:textSize="@dimen/title_levelfour_text_size_14" />
+	<TextView 
+	    android:id="@+id/tv_phone_num"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18613890807"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+	    />
+	</RelativeLayout>
+    <!-- <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:textColor="#336598"
+        android:layout_marginLeft="10dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:text="hhhh"/> -->
+
+</LinearLayout>

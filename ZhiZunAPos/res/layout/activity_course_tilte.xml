@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/darkblue_3"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <FrameLayout
+            android:id="@+id/fl_left_return"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:background="@drawable/arrow_left" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/view_round_left_course" >
+
+            <LinearLayout
+                android:id="@+id/ll_search_switch"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_search_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="课程"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+
+                <ImageButton
+                    android:layout_width="12sp"
+                    android:layout_height="12sp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_action_next_pressed" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/listview_item" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/fl_btn_search"
+                android:layout_toRightOf="@+id/ll_search_switch"
+                android:background="@null"
+                android:hint="@string/course_input_organization"
+                android:textColorHint="@color/lighter_gray"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <FrameLayout
+                android:id="@+id/fl_btn_search"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/search" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_right_nagv"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

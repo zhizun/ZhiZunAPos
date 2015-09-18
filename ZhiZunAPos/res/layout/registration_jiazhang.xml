@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_registration_jiazhang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180.0dip"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_yh_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <EditText
+                    android:id="@+id/et_yh_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:hint="请输入手机号"
+                    android:background="@null"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/category_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="5dp"
+                android:background="@color/grays_divider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_yh_list_title55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="验证码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <EditText
+                    android:id="@+id/et_yh_list_title99"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_yh_list_title55"
+                    android:ems="10"
+                    android:hint="请输入验证码"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_getidentifyingcode_button"
+                    android:text="获取"
+                    android:textColor="@color/gray_font"
+                    android:padding="5dp"
+                    android:layout_alignBaseline="@+id/et_yh_list_title99"
+                    android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            </RelativeLayout>
+              <View
+                android:id="@+id/category_line1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="5dp"
+                android:background="@color/grays_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_yh_list_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <EditText
+                    android:id="@+id/et_yh_list_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:hint="(6-14字符)"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/registration_text" 
+        android:textSize="@dimen/title_leveltwo_text_size_18"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_login_button">
+    </Button>
+
+</LinearLayout>

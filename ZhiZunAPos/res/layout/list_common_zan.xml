@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_list_commom_zan"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginTop="7dp"
+    android:padding="3dp" 
+    android:visibility="gone" 
+    >
+
+    <ImageView
+        android:id="@+id/imgbtn_yh_logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/dianzan" />
+
+    <TextView
+        android:id="@+id/tv_list_common_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="14"
+        android:text=""
+        android:textColor="@color/darkblue_3"
+        android:textSize="@dimen/title_levelfour_text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_list_common_zan_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="14"
+        android:text=""
+        android:textColor="@color/darkblue_3"
+        android:textSize="@dimen/title_levelfour_text_size_14" />
+
+</LinearLayout>

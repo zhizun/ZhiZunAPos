@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:gravity="bottom" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_myepei_techer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/sv_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:scrollbars="none"
+        android:layout_above="@+id/fl_comment_send"
+        android:layout_below="@+id/title_bar_myepei_techer" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+ 
+            <LinearLayout
+                android:id="@+id/ll_comment_org_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:textSize="@dimen/title_levelthree_text_size_16"
+                	android:textColor="@color/gray"
+                	android:text="培训机构" />
+                <TextView
+                    android:id="@+id/tv_comment_org_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/title_levelthree_text_size_16"
+                    android:background="@drawable/rounded_edittext"
+                    android:gravity="left" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_comment_course_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:textSize="@dimen/title_levelthree_text_size_16"
+                	android:textColor="@color/gray"
+                	android:text="所学课程" />
+                
+                <TextView
+                    android:id="@+id/tv_comment_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/title_levelthree_text_size_16"
+                    android:background="@drawable/rounded_edittext"
+                    android:gravity="left" />
+            </LinearLayout>
+            
+            <com.ch.epw.view.NoScrollListView
+                android:id="@+id/ll_course_comment_starlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" >
+            </com.ch.epw.view.NoScrollListView>
+
+            <EditText
+                android:id="@+id/et_comment_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="left|top"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/title_levelthree_text_size_16"
+                android:textColorHint="@color/lighter_gray"
+                android:hint="对孩子上的这个培训班满意吗？教学环境、教师水平、学习效果怎么样？给朋友们分享一下，帮助他们也找到合适的培训班吧！"
+                android:inputType="textMultiLine"
+                android:maxLength="400"
+                android:padding="10dp" >
+            </EditText>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加图片"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_text_upload_image_tips"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/title_levelfive_text_size_12" />
+
+            <com.ch.epw.view.NoScrollGridView
+                android:id="@+id/gv_pic_gridlist"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@color/white"
+	            android:gravity="center_horizontal"
+	            android:numColumns="3"
+	            android:stretchMode="columnWidth"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="20dp"
+	            android:scrollbars="none"
+	            android:listSelector="#00000000"
+	            android:horizontalSpacing="5dp"
+	            android:verticalSpacing="5dp" >
+            </com.ch.epw.view.NoScrollGridView>
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    >
+            <FrameLayout
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		>
+
+                <CheckBox
+                    android:id="@+id/cb_is_anonymous"
+                    style="@style/custom_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="匿名评价"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/title_levelfour_text_size_14" />
+
+            </FrameLayout>
+             <FrameLayout
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		>
+                <CheckBox
+                    android:id="@+id/cb_is_friends_shead"
+                    style="@style/custom_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="分享给好友"
+                    android:checked="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/title_levelfour_text_size_14" />
+
+            </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fl_comment_send"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_comment_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_button_corner_money_solid"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="发表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+    </FrameLayout>
+
+</RelativeLayout>

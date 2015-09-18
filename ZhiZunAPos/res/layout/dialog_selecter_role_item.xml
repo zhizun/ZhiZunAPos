@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:paddingTop="10dp" >
+
+    <com.zhizun.pos.widget.circularimage.CircularImage
+        android:id="@+id/iv_dialog_select_role_item_pic"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" 
+        
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_dialog_select_role_item_pic"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_dialog_select_role_item_orgname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="宝宝家长"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_dialog_select_role_item_rolename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grays_divider" >
+    </View>
+
+</RelativeLayout>

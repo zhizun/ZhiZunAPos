@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="启用通信录查找好友" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/itembg" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="10dp"
+        android:textColor="@color/gray_font"
+        android:textSize="16dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="益培网将使用通讯录来查找您的朋友，获取他们对培训班的评价。" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/itembg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现在启用" 
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:background="@color/darkblue_3"/>
+
+        <Button
+            android:id="@+id/bt_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_border"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:text="暂不启用"
+            android:textColor="@color/gray_font"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/il_dialog_selecter_role_title"
+        layout="@layout/dialog_selecter_role_title" />
+
+    <ListView
+        android:id="@+id/ll_dialog_selecter_role_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_dialog_selecter_role_title" >
+    </ListView>
+
+</RelativeLayout>

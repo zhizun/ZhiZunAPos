@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameLayout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+<LinearLayout
+    android:id="@+id/ll_marketing_spalsh"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#00000000"
+        >
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#99000000"
+            ></LinearLayout>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:background="#00000000"
+            ></LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout_root"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#99000000">
+        <ImageView
+            android:id="@+id/imageView_main_guide"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marketing_top"
+             />
+        <ImageView
+            android:id="@+id/imageView_main_guide_center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marketing_center"
+            android:layout_marginTop="40dp"
+            android:layout_above="@+id/imageView_main_guide_top"
+            android:layout_marginBottom="10dp"
+             />
+        <ImageView
+            android:id="@+id/imageView_main_guide_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marketing_bottom"
+            android:layout_alignParentBottom="true"
+             />
+    </RelativeLayout>
+    	<RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/activity_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+             >
+
+            <RadioButton
+                android:id="@+id/radiobutton_sy"
+                style="@style/tab_item_background"
+                android:drawableTop="@drawable/index_sy_selected"
+                android:text="首页"
+                android:padding="10dp"
+                android:textColor="@color/darkblue_3"
+                android:textSize="@dimen/title_levelfive_text_size_12" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_hd"
+                style="@style/tab_item_background"
+                android:drawableTop="@drawable/index_friends_normal"
+                android:text="朋友圈"
+                android:checked="false"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelfive_text_size_12" />
+			<RadioButton
+                android:id="@+id/radiobutton_near"
+                style="@style/tab_item_background"
+                android:drawableTop="@drawable/index_nearby_normal"
+                android:text="互动"
+                android:checked="false"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelfive_text_size_12" />
+            <RadioButton
+                android:id="@+id/radiobutton_wd"
+                style="@style/tab_item_background"
+                android:drawableTop="@drawable/index_wdyp_normal"
+                android:text="我的"
+                android:padding="10dp"
+                android:checked="false"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelfive_text_size_12" />
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_myepei_babyinfo_catlist_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:text=""
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:background="@color/grays_divider"
+        android:layout_height="match_parent" >
+    </View>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/darkblue_3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/lv_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_loginAcitivyt"
+            android:background="@drawable/view_round_left_course"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="@string/course_input_organization"
+                android:textColor="@color/lighter_gray"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_loginAcitivyt"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@string/login_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- ViewPager是一个控件 -->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/adv_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="130dp" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adv_pager"
+            android:layout_marginTop="-25px"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lv_zhao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewGroup"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_search_org"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/course_org" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/look_organization"
+                        android:textColor="@color/jigou_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/jigou_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grays_divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_search_cour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/course_c" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/look_course"
+                        android:textColor="@color/kecheng_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/kecheng_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grays_divider"/>
+
+            <LinearLayout
+                android:id="@+id/ll_search_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/course_prize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/title_text_search_acts"
+                        android:textColor="@color/huodong_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/huodong_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+	<View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/itembg" />
+    <ListView
+        android:id="@+id/ll_marketing_activities"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:clickable="true" />
+
+</LinearLayout>

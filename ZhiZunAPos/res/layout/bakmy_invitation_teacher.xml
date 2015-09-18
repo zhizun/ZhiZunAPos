@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+<include layout="@layout/myinvitation_title_bar"/>
+
+    <TextView
+        android:id="@+id/tv_yh_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="收到的邀请"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grays_divider" />
+
+    <include layout="@layout/list_my_invitation_receive_item" android:id="@+id/yqjz"/>
+
+
+    <TextView
+        android:id="@+id/tv_yh_list_title1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="发出的邀请"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grays_divider" />
+
+    <include layout="@layout/list_my_invitation_send_item" />
+
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:background="@color/darkblue_dialog_title_bg" >
+
+    <TextView
+        android:id="@+id/tv_dialog_select_role_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="选择角色"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_levelone_text_size_20" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_dialog_select_role_title_text"
+        android:src="@drawable/myepei_role" />
+
+</RelativeLayout>

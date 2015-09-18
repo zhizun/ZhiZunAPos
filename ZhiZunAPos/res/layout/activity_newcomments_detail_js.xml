@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/list_jtzy_js_item_titile" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grays_divider" />
+
+    <TextView
+        android:id="@+id/tv_list_jtzy_js_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+   
+
+    <include layout="@layout/list_shh_simple" />
+
+    <com.ch.epw.view.NoScrollListView
+        android:id="@+id/ll_list_jtzy_js_item_commentlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+    </com.ch.epw.view.NoScrollListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_list_common_pinglun_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.75"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="说点什么吧~~~"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null" />
+
+        <Button
+            android:id="@+id/btn_list_common_pinglun_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:text="发送"
+            android:textColor="@color/black" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

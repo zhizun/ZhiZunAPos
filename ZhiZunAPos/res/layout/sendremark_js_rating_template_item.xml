@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <TableRow>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_jtzy"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1.1"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <ImageView
+                android:id="@+id/sp_sendremark_js_rating_template_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/select_temlate" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="0.75"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <RatingBar
+                android:id="@+id/rb_sendremark_js_rating_template_item_del_ratingbar"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1.15"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <ImageView
+                android:id="@+id/iv_sendremark_js_rating_template_item_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/remark_del" />
+        </RelativeLayout>
+    </TableRow>
+
+</TableLayout>

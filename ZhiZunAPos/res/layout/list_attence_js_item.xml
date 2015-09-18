@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_tv_list_attence_js_item_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_classname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="6"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <ImageView
+                android:id="@+id/iv_list_attence_js_item_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/channel_glide_day_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tv_list_attence_js_item_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_attenceinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="已到/未到：5/0"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <ImageView
+                android:id="@+id/iv_list_attence_js_item_foldoropen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/fold"
+                android:tag="fold" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_xinzeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/attence_class_add_attence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grays_divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_list_attence_js_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_attencetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="考勤时间："
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_attencetime_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_xhks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="消耗课时："
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_xhks_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="记录人："
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_username_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </LinearLayout>
+
+        <com.ch.epw.view.NoScrollGridView
+            android:id="@+id/ngv_list_attence_js_item_attencelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:numColumns="2" >
+        </com.ch.epw.view.NoScrollGridView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TableRow
+        android:id="@+id/tr_list_attence_js_item_gridviewitem_title"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/bg_table_pink"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="姓名"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_zxdt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/bg_table_pink"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="考勤"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_navigation_teacher_jtzy"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <TextView
+                android:id="@+id/tv_list_attence_js_item_gridviewitem_stuname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:maxLength="@string/max_person_familyname_len"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/bg_pink_divider" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_pink_divider" />
+
+            <ImageView
+                android:id="@+id/iv_list_attence_js_item_gridviewitem_isorno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/kqyd_green" />
+        </RelativeLayout>
+    </TableRow>
+
+</TableLayout>

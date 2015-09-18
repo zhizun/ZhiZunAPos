@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_list_zxdp_js_template_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

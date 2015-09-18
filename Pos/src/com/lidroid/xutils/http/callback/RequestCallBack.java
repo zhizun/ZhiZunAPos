@@ -5,8 +5,6 @@ import com.lidroid.xutils.http.ResponseInfo;
 
 public abstract class RequestCallBack<T>
 {
-  private static final int DEFAULT_RATE = 1000;
-  private static final int MIN_RATE = 200;
   private int rate;
   private String requestUrl;
   protected Object userTag;

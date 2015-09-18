@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@color/darkblue_dialog_title_bg" >
+
+        <TextView
+            android:id="@+id/tv_dialog_select_role_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="选择接收人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_levelone_text_size_20" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_teacher_receviers_sendteacher"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_version"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_yh_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="发送给老师"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+    <include layout="@layout/gray_divider" 
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_fstz_teacher_receviers_sendstudent"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_myepei_arrow_version1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_yh_list_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="发送给学生"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhizun.pos"
+    android:versionCode="13"
+    android:versionName="1.0.12" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 读取联系人权限 -->   
+	<uses-permission android:name="android.permission.READ_CONTACTS"/> 
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+
+    <!-- jpush需要权限 -->
+    <!-- Required -->
+    <permission
+        android:name="com.ch.epw.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.ch.epw.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="com.zhizun.pos.app.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="N4mXNWkz8ON0rIkcKRGKEgot" />
+<!-- 至尊登录页面 -->
+        <activity
+            android:name="com.zhizun.pos.main.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 至尊注册页面 -->
+        <activity
+            android:name="com.zhizun.pos.main.RegisteredActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.GuideActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.RegistrationParentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.RegistrationSchoolMasterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyepeiTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyInvitationTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.MyInvitationRquestParentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyInvitationRquestTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.MyInvitationRquestSelectStudentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.NavigationTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.InSchoolDynamicTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendDynamicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyInvitationSendTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyInvitationSendParentTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.MyepeiParentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.MyInvitationParentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyInvitationSelectStudentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MyepeiSwitchRoleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.DynamicNewCommentsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendNoticeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendNoticePatternActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.NoticeTempleteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyNoticeTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.NoticeReceiveBoxDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.NoticeSendBoxDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ImageShowActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyHomeworkTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendHomeworkActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SingleSelectionSelectStudentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.DynamicNewCommentsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.HomeworkNewCommentsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.AttenceTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.AttenceEditTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.AttenceSaveTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.InSchoolCommentTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendRemarkActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.RemarkNewCommentsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.VoiceTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ForgetPasswordStep1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ForgetPasswordStep2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ForgetPasswordStep3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ForgetPasswordStep4Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.SelectTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.SendVoiceParentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyepeiMyClassTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.RegisterStep1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.RegisterStep2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.RegisterStep3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.RegisterStep4Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.BindPhone1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.BindPhone2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.BindPhone3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.BindPhone4Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangeBindPhone1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangeBindPhone2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangeBindPhone3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangeBindPhone4Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangeBindPhone5Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangePassword1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangePassword2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ChangePassword3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.MyepeiMyClassActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.CropImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.LocationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MyepeiPersonInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.BabyInfoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.BabyInfoDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.CatSelectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.BabyinfoOrgListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.NewCommonCommentsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.VoiceNewCommentsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.PhotoShowActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.AlbumShowActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MyInvitationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MyInvitationRquestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.jz.activity.SingleSelectTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SendNoticeSelectTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyepeiTeacherAgentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.MyepeiTeacherAgentHistoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.SingleSelectTeacherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.ChangeClassSelectStudentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.IndexActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhizun.pos.activity.MarketingactivitiesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- shareSDK所需要 start -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent1104365270" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- shareSDK所需要 end -->
+
+        <receiver
+            android:name="com.ch.epw.receiver.MyReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+
+                <category android:name="com.ch.epw" />
+            </intent-filter>
+        </receiver>
+
+        <!-- jpush所需要 start -->
+        <!-- Required -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" > <!-- since 1.3.5 -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- since 1.3.5 -->
+                <category android:name="com.ch.epw" /> <!-- since 1.3.5 -->
+            </intent-filter> <!-- since 1.3.5 -->
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ch.epw" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="67b0f20e1256bcb9f24ce9d2" />
+        <!-- jpush所需要 end -->
+
+        <activity android:name="com.zhizun.pos.activity.ChannelActivity" >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.DetailsActivity" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity android:name="com.zhizun.pos.activity.NewCommentsDetailActivity" 
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.AboutActivity" 
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name="com.ch.epw.js.activity.AttenceRemarksActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+         </activity>
+        <activity android:name="com.zhizun.pos.activity.PrizedEventActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.PrizedEventIntroduceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.PrizedParticipationActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.PrizedRecommendationActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.RecommendationPickerListActivity" 
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name="com.zhizun.pos.activity.SearchHistoryActivity" 
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.CourseListViewActivity" 
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.CourseApply" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsStartUsingActivityDialog" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsStartErrorActivityDialog" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.CoursePriceRangeActivity" 
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name="com.zhizun.pos.activity.SearchMarketActsActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.zhizun.pos.activity.SearchNearbyHotsActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="com.zhizun.pos.activity.CourseParticularsActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.zhizun.pos.activity.CourseCountyListViewActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.zhizun.pos.activity.OrgIntroDetailActivity" 
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.CourseDetailActivity" 
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.MyMessageActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="com.zhizun.pos.fragment.mymessage.MyMessageFragment" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.MySystemMessageDeatilActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.MySystemMessageDeatilListActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.CourseCommentListViewActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.MyCourseCommentEditActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="com.zhizun.pos.activity.FriendsCircleActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsMyCommentActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsInviteActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsContactsListViewActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.SetJurisdictionActicity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.zhizun.pos.activity.FriendsCallPhoneDialogActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        
+        <!-- umeng 需要 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="550d6b4e56240b0520000789" >
+        </meta-data>
+        <meta-data android:value="epeiwang" android:name="UMENG_CHANNEL"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ch.epw.view.TitleBarView
+        android:id="@+id/title_bar_activity_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="选择价格区间:"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="从"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <EditText
+            android:id="@+id/et_price_one"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="0"
+            android:maxLength="6"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="—" />
+
+        <EditText
+            android:id="@+id/et_price_two"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="999999"
+            android:maxLength="6"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="元"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_price"
+        android:layout_marginTop="30dp"
+        style="@style/button_common_small"
+        android:text="@string/sure" />
+
+</LinearLayout>

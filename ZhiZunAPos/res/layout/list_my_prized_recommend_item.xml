@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp" >
+
+    <ImageView
+        android:id="@+id/im_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-04-25 15:00"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/im_logo"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="领取次数"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/tv_time"
+        android:layout_marginLeft="15dp"
+        android:textSize="14dp" />
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="成交次数"
+        android:paddingRight="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="14dp"/>
+
+</RelativeLayout>

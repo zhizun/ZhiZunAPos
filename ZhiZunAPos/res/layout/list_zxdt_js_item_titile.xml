@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/tv_list_zxdt_js_item_title_sendtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送时间："
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <TextView
+        android:id="@+id/tv_list_zxdt_js_item_title_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="发送人："
+        android:textColor="@color/gray_font"
+        android:textSize="@dimen/title_levelthree_text_size_16" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_list_zxdt_js_item_title_recevierleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接收人："
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_zxdt_js_item_title_receviermiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_list_zxdt_js_item_title_recevierleft"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="12"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_list_zxdt_js_item_title_recevierright"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/tv_list_zxdt_js_item_title_receviermiddle"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/darkblue_2"
+                android:textSize="@dimen/title_levelthree_text_size_16" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_changeclass_bottom_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rl_changeclass_bottom_bar_changeclass"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_changeclass_bottom_bar_rolepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_changeclass_bottom_bar_changeclass"
+            android:src="@drawable/zhuanban" />
+
+        <TextView
+            android:id="@+id/tv_changeclass_bottom_bar_changeclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="转班"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_changeclass_bottom_bar_quitschool"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_myepei_common_myinfo_classpic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_changeclass_bottom_bar_quitschool"
+            android:src="@drawable/xiuxue" />
+
+        <TextView
+            android:id="@+id/tv_changeclass_bottom_bar_quitschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="休学"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_changeclass_bottom_bar_graduate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_changeclass_bottom_bar_graduatepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_changeclass_bottom_bar_graduate"
+            android:src="@drawable/biye" />
+
+        <TextView
+            android:id="@+id/tv_changeclass_bottom_bar_graduate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="毕业"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_changeclass_bottom_bar_quitclass"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_changeclass_bottom_bar_quitclasspic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_changeclass_bottom_bar_quitclass"
+            android:src="@drawable/tuiban" />
+
+        <TextView
+            android:id="@+id/tv_changeclass_bottom_bar_quitclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="退班"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+</LinearLayout>

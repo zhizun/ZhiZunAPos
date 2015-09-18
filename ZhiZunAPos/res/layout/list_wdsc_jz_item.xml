@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    <include layout="@layout/list_common_titile" />
+    
+	<com.ch.epw.view.NoScrollListView
+        android:id="@+id/ll_list_wdsc_item_starlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:clickable="false"
+        android:divider="@null"
+        android:dividerHeight="0dp" >
+    </com.ch.epw.view.NoScrollListView>
+
+    <TextView
+        android:id="@+id/tv_list_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_levelthree_text_size_16" 
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp" />
+	
+	<com.ch.epw.view.NoScrollGridView
+        android:id="@+id/ngv_list_wdsc_item_imagelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:horizontalSpacing="4dp"
+        android:numColumns="5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:verticalSpacing="4dp" >
+    </com.ch.epw.view.NoScrollGridView>
+    
+	<View 
+    	android:layout_width="fill_parent"
+    	android:layout_height="1sp"
+    	android:background="@color/listview_item_down" />
+</LinearLayout>

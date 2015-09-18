@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    android:background="@color/grays_zan_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" 
+    android:padding="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/ll_list_common_ssh_zan" >
+
+        <ImageView
+            android:id="@+id/iv_list_common_ssh_zan"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/like" />
+
+        <TextView
+            android:id="@+id/tv_list_common_ssh_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赞"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" 
+        android:id="@+id/ll_list_common_ssh_sc"  >
+
+        <ImageView
+            android:id="@+id/iv_list_common_ssh_sc"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/shoucang" />
+
+        <TextView
+            android:id="@+id/tv_list_common_ssh_sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ll_list_common_ssh_fx" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/fenxiang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list_common_ssh_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pinglun" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_list_common_ssh_commentcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（0）"
+            android:textColor="@color/darkblue_3"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_list_common_title_logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_list_common_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_levelthree_text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_list_common_title_orgname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelfour_text_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/ll_list_org_optional_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/tv_list_org_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_levelfour_text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_list_org_viewnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_levelfour_text_size_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_list_common_more_cour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center|left"
+            android:text="查看该机构课程>>"
+            android:textColor="@color/gray_font"
+            android:textSize="@dimen/title_levelfour_text_size_14" />
+    </LinearLayout>
+
+</LinearLayout>

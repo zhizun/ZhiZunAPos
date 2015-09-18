@@ -1,0 +1,239 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grays_backgroud"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_babyinfo_bar" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/grays_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myepei_personinfo_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_babyinfo_backgroud"
+        android:paddingBottom="10dp" >
+
+        <com.zhizun.pos.widget.circularimage.CircularImage
+            android:id="@+id/iv_myepei_personinfo_pic"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_myepei_babyinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_myepei_personinfo_pic"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_myepei_babyinfo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_myepei_babyinfo_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+            <ImageView
+                android:id="@+id/iv_myepei_babyinfo_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/sex_man" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_myepei_babyinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_arrow_right_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_right" />
+
+            <TextView
+                android:id="@+id/tv_myepei_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="基本信息"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_leveltwo_text_size_18" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/category_line3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/grays_divider" />
+
+        <LinearLayout
+            android:id="@+id/rl_myepei_personinfo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="乳        名"
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_myepei_babyinfo_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="出生日期"
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_myepei_babyinfo_birthdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="兴趣爱好"
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_myepei_babyinfo_cats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_font"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/grays_divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_myepei_personinfo_babyinfo_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:id="@+id/iv_arrow_right_babyinfo_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_personinfo_babyinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="已加入教育机构"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+
+        <TextView
+            android:id="@+id/tv_myepei_babyinfo_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_personinfo_babyinfo"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_leveltwo_text_size_18" />
+    </RelativeLayout>
+
+</LinearLayout>
