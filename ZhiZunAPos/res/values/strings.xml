@@ -2,6 +2,11 @@
 <resources>
 
     <string name="app_name">建业至尊</string>
+    <string name="sellprods">卖货</string>
+    <string name="zhizun_preview">票据预览</string>
+    <string name="add_commodity">新建商品</string>
+    
+    
     <string name="in_school_dynamic">在校动态</string>
     <string name="in_school_comment">在校点评</string>
     <string name="latest_reply">最新回复</string>

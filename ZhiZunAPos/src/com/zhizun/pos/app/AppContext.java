@@ -122,6 +122,7 @@ import com.zhizun.pos.bean.ValidCodeResult;
 import com.zhizun.pos.bean.ValidUserResult;
 import com.zhizun.pos.bean.VoiceDetail;
 import com.zhizun.pos.bean.VoiceList;
+import com.zhizun.pos.main.bean.GetCodeBean;
 
 /**
  * 全局应用程序类：用于保存和调用全局应用配置及访问网络数据
@@ -1882,5 +1883,32 @@ public class AppContext extends Application {
 	public BaseBean deleteCourseComment(String commentId) throws AppException {
 		return ApiClient.deleteCourseComment(this, commentId);
 	}
+	
+	/**
+	 * 建业至尊
+	 * 			根据设备号申请秘钥
+	 */
+	public GetCodeBean queryZhiZunGetCodeBase(String s_no)
+			throws AppException {
+		return ApiClient.queryZhiZunGetCodeBase(this, s_no);
+	}
+	/**
+	 * 建业至尊
+	 * 			注册
+	 */
+	public GetCodeBean queryRegisterBase(String userName,String password,String register,String email)
+			throws AppException {
+		return ApiClient.queryRegisterBase(this,userName,password,register,email);
+	}
+	/**
+	 * 建业至尊
+	 * 			登录
+	 */
+	public GetCodeBean queryLoginBase(String userName,String password)
+			throws AppException {
+		return ApiClient.queryLoginBase(this,userName,password);
+	}
+	
+
 
 }

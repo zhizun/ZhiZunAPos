@@ -30,7 +30,7 @@
 				    android:textSize="@dimen/title_leveltwo_text_size_18"
 				    />
                 <EditText
-                    android:id="@+id/phone_login_username"
+                    android:id="@+id/register_username"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="20dp"
@@ -64,7 +64,7 @@
 				    android:textSize="@dimen/title_leveltwo_text_size_18"
 				    />
                 <EditText
-                    android:id="@+id/phone_login_passoad"
+                    android:id="@+id/register_passoad"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="20dp"
@@ -73,6 +73,38 @@
                     android:singleLine="true"
                     android:hint="请输入密码"
                     android:numeric="integer"
+                    android:textColorHint="#999999"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+            <View
+                android:id="@+id/phone_category_email"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grays_divider" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+				<TextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="邮箱"
+				    android:textSize="@dimen/title_leveltwo_text_size_18"
+				    />
+                <EditText
+                    android:id="@+id/register_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="请输入邮箱"
                     android:textColorHint="#999999"
                     android:textSize="@dimen/title_leveltwo_text_size_18" />
             </LinearLayout>
@@ -101,7 +133,7 @@
 				    android:textSize="@dimen/title_leveltwo_text_size_18"
 				    />
                 <EditText
-                    android:id="@+id/phone_login_password"
+                    android:id="@+id/register_pd"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="20dp"
@@ -137,6 +169,21 @@
                     android:layout_marginTop="10dp"
                     android:textColor="@color/gray"
                     android:textSize="@dimen/title_levelthree_text_size_16" />
+            
+            <Button
+	            android:id="@+id/btn_zhuce_submit"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="15dp"
+	            android:layout_marginRight="15dp"
+	            android:layout_marginTop="10dp"
+	            android:background="@drawable/bg_zhuce_button"
+	            android:text="注册"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/title_leveltwo_text_size_19" >
+	        </Button>
         </LinearLayout>
+        
+    
 
 </LinearLayout>

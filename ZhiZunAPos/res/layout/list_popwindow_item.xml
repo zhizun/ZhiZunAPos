@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_popwindow"
     android:orientation="vertical" 
-    android:gravity="center_vertical"
+    android:gravity="center_vertical|center_horizontal"
     >
 
     <TextView
         android:id="@+id/tv_list_popwindow_edit"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:padding="5dp"
-        android:text="编辑"
-        android:textColor="@color/white"
+        android:text="批发"
+        android:gravity="center"
+        android:textColor="@color/title_zhizun"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tv_list_popwindow_delete"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="删除"
-        android:textColor="@color/white"
+        android:text="零售"
+        android:gravity="center"
+        android:textColor="@color/title_zhizun"
         android:textSize="18sp" />
 
 </LinearLayout>

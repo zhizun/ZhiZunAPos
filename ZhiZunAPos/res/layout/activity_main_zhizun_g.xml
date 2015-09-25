@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/simple_eeeeee" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+             >
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_zxdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp" >
+
+                <ImageView
+                    android:id="@+id/iv_zxdt_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/zxdt_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="进货"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_tzgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp" >
+
+                <ImageView
+                    android:id="@+id/iv_tzgg_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/tzgg_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="卖货"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rl_activity_zhizun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp" >
+
+                <ImageView
+                    android:id="@+id/iv_zhizun_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/tzgg_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="管账"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_jtzy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="30dp" >
+
+                <ImageView
+                    android:id="@+id/iv_jtzy_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/jtzy_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="家庭作业"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_kqjl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="30dp" >
+
+                <ImageView
+                    android:id="@+id/iv_kqjl_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/kqjl_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="考勤记录"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" >
+                </TextView>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_zxdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="30dp" >
+
+                <ImageView
+                    android:id="@+id/iv_zxdp_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/zxdp_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="在校点评"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_activity_navigation_teacher_jzxs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_teacher_navgation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="30dp" >
+
+                <ImageView
+                    android:id="@+id/iv_jzxs_js"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/jzxs_js" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="家长心声"
+                    android:textSize="@dimen/title_leveltwo_text_size_18" >
+                </TextView>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

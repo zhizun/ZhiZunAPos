@@ -105,6 +105,7 @@ import com.zhizun.pos.bean.ValidCodeResult;
 import com.zhizun.pos.bean.ValidUserResult;
 import com.zhizun.pos.bean.VoiceDetail;
 import com.zhizun.pos.bean.VoiceList;
+import com.zhizun.pos.main.bean.GetCodeBean;
 
 /**
  * API客户端接口：用于访问网络数据
@@ -178,16 +179,14 @@ public class ApiClient {
 	}
 
 	private static HttpPost getHttpPost(String url, String cookie,
-			String userAgent, String token) {
+			String userAgent) {
 
 		HttpPost httpPost = new HttpPost(url);
-		httpPost.addHeader("Host", URLs.EPEIWANG_URL);
-		httpPost.addHeader("Connection", "Keep-Alive");
-		httpPost.addHeader("User-Agent", userAgent);
-		httpPost.addHeader("Cookie", cookie);
-		Log.i(TAG, "X-Auth-Token=" + token);
+//		httpPost.addHeader("Host", URLs.EPEIWANG_URL);
+//		httpPost.addHeader("Connection", "Keep-Alive");
+//		httpPost.addHeader("User-Agent", userAgent);
+//		httpPost.addHeader("Cookie", cookie);
 		Log.i(TAG, "url=" + url);
-		httpPost.addHeader("X-Auth-Token", token);
 		return httpPost;
 	}
 
@@ -300,10 +299,13 @@ public class ApiClient {
 			Map<String, Object> params) throws AppException {
 		Log.i(TAG, String.valueOf(params));
 		
-		String cookie = getCookie(appContext);
+//		String cookie = getCookie(appContext);
 		SharedPreferences sp = appContext.getSharedPref("appToken");
 		String token = sp.getString("token", "");
-		String userAgent = getUserAgent(appContext);
+		if (!token.equals("")) {
+			params.put("hashcode", token);
+		}
+//		String userAgent = getUserAgent(appContext);
 		DefaultHttpClient httpClient = null;
 		HttpPost httpPost = null;
 		List<NameValuePair> formParams = null;
@@ -319,8 +321,9 @@ public class ApiClient {
 		String responseBody = "";
 		try {
 			httpClient = getHttpClient();
-			httpPost = getHttpPost(url, cookie, userAgent, token);
 			if (formParams != null) {
+//				httpPost = getHttpPost(url, cookie, userAgent);
+				httpPost = new HttpPost(url);
 				httpPost.setEntity(new UrlEncodedFormEntity(formParams, "UTF-8"));
 			}
 			HttpResponse response = httpClient.execute(httpPost);
@@ -3665,6 +3668,71 @@ public class ApiClient {
 		try {
 			return Result.parse(_post(appContext, URLs.DELETE_COUESE_COMMENT_URL,
 					map));
+		} catch (Exception e) {
+			if (e instanceof AppException)
+				throw (AppException) e;
+			throw AppException.network(e);
+		}
+	}
+	/**
+	 * 建业至尊
+	 * 			申请秘钥
+	 * @param appContext
+	 * @param commentId
+	 * @param newFlag
+	 * @return
+	 * @throws AppException
+	 */
+	public static GetCodeBean queryZhiZunGetCodeBase(AppContext appContext, String s_no) throws AppException {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("s_no", s_no);
+		map.put("act", "getcode");
+		try {
+			return GetCodeBean.parse(_post(appContext,
+					URLs.ZHI_ZUN_GET_CODE_URL, map));
+		} catch (Exception e) {
+			if (e instanceof AppException)
+				throw (AppException) e;
+			throw AppException.network(e);
+		}
+	}
+	/**
+	 * 注册接口
+	 * @param appContext
+	 * @param s_no
+	 * @return
+	 * @throws AppException
+	 */
+	public static GetCodeBean queryRegisterBase(AppContext appContext, String userName,String password,String register,String email) throws AppException {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("username", userName);
+		map.put("password", password);
+		map.put("email", email);
+		map.put("act", "register");//接口
+		try {
+			return GetCodeBean.parse(_post(appContext,
+					URLs.ZHI_ZUN_GET_CODE_URL, map));
+		} catch (Exception e) {
+			if (e instanceof AppException)
+				throw (AppException) e;
+			throw AppException.network(e);
+		}
+	}
+	/**
+	 * 登录接口
+	 * @param appContext
+	 * @param s_no
+	 * @return
+	 * @throws AppException
+	 */
+	public static GetCodeBean queryLoginBase(AppContext appContext, String userName,String password) throws AppException {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("username", userName);
+		map.put("password", password);
+		map.put("act", "login");//接口
+		try {
+			return GetCodeBean.parse(_post(appContext,
+					URLs.ZHI_ZUN_GET_CODE_URL, map));
 		} catch (Exception e) {
 			if (e instanceof AppException)
 				throw (AppException) e;

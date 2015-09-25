@@ -601,5 +601,7 @@ public class URLs implements Serializable {
 
 		return imgUri;
 	}
+	
+	public final static String ZHI_ZUN_GET_CODE_URL = "http://wap.9617777.com/jinxiao.php";
 
 }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	    <RelativeLayout 
+	        android:id="@+id/main_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp"
+	        android:background="@color/title_zhizun"
+	        >
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/tongbu_zhizun"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10dp"
+	            />
+	        <EditText 
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content"
+	            android:padding="5dp"
+	            android:gravity="left"
+	            android:background="@drawable/bg_button_zhizun_main"
+	            />
+	        <ImageView 
+	            android:id="@+id/zhizun_main_saoma"
+	            android:layout_alignParentRight="true"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/sm_zhizun"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            />
+	    </RelativeLayout>
+	    <ImageView 
+	        android:id="@+id/image_main_banner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/banner_top"
+	        android:layout_below="@+id/main_title"
+	        />
+		 <GridView 
+	        android:id="@+id/gv_main_mu"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/main_radiogroup"
+	        android:numColumns="3"
+	        android:layout_below="@+id/image_main_banner"
+	        >
+	    </GridView>
+	    <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/activity_bg_color"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+	            <RadioButton
+	                android:id="@+id/radiobutton_sy"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_main_btn_selector"
+	                android:text="首页"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	            <RadioButton
+	                android:id="@+id/radiobutton_hd"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_interact_btn_selector"
+	                android:text="来往单位"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	            
+	            <RadioButton
+	                android:id="@+id/radiobutton_wd"
+	                style="@style/tab_item_background"
+	                android:drawableTop="@drawable/index_bar_myepei_btn_selector"
+	                android:text="发现"
+	                android:textSize="@dimen/title_levelfive_text_size_12" />
+	        </RadioGroup>
+	        
+</RelativeLayout>

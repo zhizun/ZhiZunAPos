@@ -6,12 +6,24 @@ import java.util.Set;
 
 import com.ch.epw.js.activity.MyepeiTeacherActivity;
 import com.ch.epw.js.activity.NavigationTeacherActivity;
+import com.zhizun.pos.R;
 import com.zhizun.pos.activity.FriendsCircleActivity;
 import com.zhizun.pos.activity.LoginActivity;
 import com.zhizun.pos.activity.MainActivity;
 import com.zhizun.pos.activity.MarketingactivitiesActivity;
 
 public class Constant {
+	
+	/**
+	 * 至尊主页面9宫格菜单
+	 */
+	public static String[] titles = new String[] 
+		    { "卖货", "进货", "管账", "仓库", "统计", "盘点", "退货", "欠收欠付", "更多"}; 
+	public static Integer[] imgs = { 
+        R.drawable.main_menu_1, R.drawable.main_menu_2, R.drawable.main_menu_3,  
+        R.drawable.main_menu_4, R.drawable.main_menu_5, R.drawable.main_menu_6,                
+        R.drawable.main_menu_7, R.drawable.main_menu_8, R.drawable.main_menu_9,  }; 
+	
 
 	/**
 	 * 获取列表的条数
